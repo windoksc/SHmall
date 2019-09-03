@@ -16,4 +16,9 @@ public class Ser {
 	@Autowired
 	private SqlSession sqlSession;
 	private static final String Namespace = "com.com.mapper.memberMapper";
+	
+	public List<Map<String,Object>> selects() throws Exception {
+		return sqlSession.selectList("test");
+	}
+	
 }
