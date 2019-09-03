@@ -1,5 +1,6 @@
 package com.sm.project;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,8 +18,11 @@ public class Ser {
 	private SqlSession sqlSession;
 	private static final String Namespace = "com.com.mapper.memberMapper";
 	
-	public List<Map<String,Object>> selects() throws Exception {
-		return sqlSession.selectList("test");
+	public int login(Map<String,Object> login) throws Exception {
+		return sqlSession.selectOne("login",login);
 	}
-	
+	public void singup(Map<String,Object> map) throws Exception {
+		 sqlSession.insert("singup", map);
+	}
+
 }
