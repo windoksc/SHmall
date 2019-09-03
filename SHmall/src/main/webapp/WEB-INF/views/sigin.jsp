@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<script src="https://code.jquery.com/jquery-1.12.4.	js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page session="false" %>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,46 +13,55 @@
 	<link rel="shortcut icon" href="//img.danawa.com/new/danawa_main/v1/img/danawa_favicon.ico" />
 	<script type="text/javascript" src="/resources/js/util/envUtils.js?v=10"></script>
 		<link href="//static.danawa.com/new/recss/member_new.css?v=10" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="/resources/js/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="/resources/js/library/underscore-1.8.3.min.js"></script>
-		<script type="text/javascript" src="/resources/js/util/envUtils.js"></script>
-		<script type="text/javascript" src="/resources/js/util/dataUtils.js"></script>
-		<script type="text/javascript" src="/resources/js/util/logUtils.js"></script>
-		<script type="text/javascript" src="/resources/js/application/common/global.js"></script>
-		<script type="text/javascript" src="/resources/js/util/navigationUtils.js"></script>
-		<script type="text/javascript" src="/resources/js/service/netService.js"></script>
-		<script type="text/javascript" src="/resources/js/DanawaMemberValidation.js"></script>
-		<script type="text/javascript" src="/resources/js/application/model/join/joinStep.js"></script>
+<!-- 		<script type="text/javascript" src="/resources/js/jquery-1.11.3.min.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/library/underscore-1.8.3.min.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/util/envUtils.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/util/dataUtils.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/util/logUtils.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/application/common/global.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/util/navigationUtils.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/service/netService.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/DanawaMemberValidation.js"></script> -->
+<!-- 		<script type="text/javascript" src="/resources/js/application/model/join/joinStep.js"></script> -->
 		<script type="text/javascript">
-			$(document).ready(function() {
-				var memberJoinStep = new DanawaMemberJoinStep();
-					memberJoinStep.initialize('1');
+// 			$(document).ready(function() {
+// 				var memberJoinStep = new DanawaMemberJoinStep();
+// 					memberJoinStep.initialize('1');
 					
-				var memberValidation = new DanawaMemberValidation();
-				var validatonTagetId = {
-						tagetFome : "danawa-member-joinStep-form-id",
-						member : {
-							id:"danawa-member-joinStep-member-id",
-							password : "danawa-member-joinStep-member-password",
-							passwordConfirm :"danawa-member-joinStep-member-passwordConfim", 
-							name : "danawa-member-joinStep-member-name",
-							nickname : "danawa-member-joinStep-member-nickname",
-							email : {
-								emailFirst :"danawa-member-joinStep-member-email-emailFirst",
-								emailSecond :"danawa-member-joinStep-member-email-emailSecond"
-							}
-						},
-						message : {
-							id:"danawa-member-joinStep-message-id",
-							password : "danawa-member-joinStep-message-password",
-							passwordConfirm : "danawa-member-joinStep-message-passwordConfirm",
-							name : "danawa-member-joinStep-message-name",
-							nickname : "danawa-member-joinStep-message-nickname", 
-							email :"danawa-member-joinStep-message-email"
-						}
-				};
-				memberValidation.initialize(validatonTagetId);
-			});
+// 				var memberValidation = new DanawaMemberValidation();
+// 				var validatonTagetId = {
+// 						tagetFome : "danawa-member-joinStep-form-id",
+// 						member : {
+// 							id:"danawa-member-joinStep-member-id",
+// 							password : "danawa-member-joinStep-member-password",
+// 							passwordConfirm :"danawa-member-joinStep-member-passwordConfim", 
+// 							name : "danawa-member-joinStep-member-name",
+// 							nickname : "danawa-member-joinStep-member-nickname",
+// 							email : {
+// 								emailFirst :"danawa-member-joinStep-member-email-emailFirst",
+// 								emailSecond :"danawa-member-joinStep-member-email-emailSecond"
+// 							}
+// 						},
+// 						message : {
+// 							id:"danawa-member-joinStep-message-id",
+// 							password : "danawa-member-joinStep-message-password",
+// 							passwordConfirm : "danawa-member-joinStep-message-passwordConfirm",
+// 							name : "danawa-member-joinStep-message-name",
+// 							nickname : "danawa-member-joinStep-message-nickname", 
+// 							email :"danawa-member-joinStep-message-email"
+// 						}
+// 				};
+// 				memberValidation.initialize(validatonTagetId);
+// 			});
+function doDisplay(){
+    var con = document.getElementById("danawa-member-joinStep-member-agreement");
+    if(con.style.display=='none'){
+        con.style.display = 'block';
+    }else{
+        con.style.display = 'none';
+    }
+}
+			
 		</script> 
 	</head>
 	<body>
@@ -121,15 +133,15 @@
 										</label>
 										<!--1702 약관보기 클릭 시 클래스 on 과 내용닫기 텍스트 변경 -->
 										<span class="btn_view ico on">
-											<button type="button" id="danawa-member-joinStep-guide-button-service" title="약관보기 버튼 누르면 상세 내용이 열립니다">약관보기 ▼</button>
+											<button type="button" onclick="javascript:doDisplay();" id="danawa-member-joinStep-guide-button-service" title="약관보기 버튼 누르면 상세 내용이 열립니다">약관보기 ▼</button>
 										</span>
 										<!--1702 웹접근성 포커스 (Tab키) 이동 시 클래스 focus 추가 탭키 이동 관련 개발 필요 -->
                                			<input class="input_check" type="checkbox" id="danawa-member-joinStep-checkBox-agree-service" title="[체크박스]" />
                                	 	</h5>
 									<div class="agree_textarea_wrap">
-										<textarea readonly="readonly" class="textarea_member" id="danawa-member-joinStep-guide-textDesc-service" cols="" rows="" style="display:none;" title="서비스 이용 약관 안내 내용"></textarea>
+										<textarea readonly="readonly"  class="textarea_member" id="danawa-member-joinStep-guide-textDesc-service" cols="" rows="" style="display:none;" title="서비스 이용 약관 안내 내용"></textarea>
 										<!-- 이용약관 설정 -->
-										<textarea readonly="readonly" class="textarea_member" id="danawa-member-joinStep-member-agreement" cols="" rows="" style="display:none;" title="개인회원 서비스 이용 약관 안내 내용">
+										<textarea readonly="readonly"  class="textarea_member" id="danawa-member-joinStep-member-agreement" cols="" rows="" style="display:none;" title="개인회원 서비스 이용 약관 안내 내용">
 											
 제 1장 총칙
 
