@@ -1,0 +1,15 @@
+@charset "UTF-8";
+	.ab,.check-all {
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    width: 22px;
+    height: 21px;
+    z-index: 9;
+    margin-top: -11px;
+    opacity: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

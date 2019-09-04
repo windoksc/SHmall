@@ -12,6 +12,7 @@
 	<link rel="shortcut icon" href="//img.danawa.com/new/danawa_main/v1/img/danawa_favicon.ico" />
 	<script type="text/javascript" src="/resources/js/util/envUtils.js?v=10"></script>
 		<link href="//static.danawa.com/new/recss/member_new.css?v=10" rel="stylesheet" type="text/css" />
+		<link href="../css/main.css" rel="stylesheet" /> 
 <!-- 		<script type="text/javascript" src="/resources/js/jquery-1.11.3.min.js"></script> -->
 <!-- 		<script type="text/javascript" src="/resources/js/library/underscore-1.8.3.min.js"></script> -->
 <!-- 		<script type="text/javascript" src="/resources/js/util/envUtils.js"></script> -->
@@ -68,6 +69,18 @@ function doDisplay2(){
 		con2.style.display='none';
 	}
 }		
+function Display2f(){
+	var con2 = document.getElementById("danawa-member-joinStep-company-self");
+		con2.style.display='block';
+		$('#danawa-member-joinStep-tap-member-on').attr('class','');
+		$('#danawa-member-joinStep-tap-company-on').attr('class','on');
+}	
+function Display3f(){
+	var con2 = document.getElementById("danawa-member-joinStep-company-self");
+	con2.style.display='none';
+	$('#danawa-member-joinStep-tap-company-on').attr('class','');
+	$('#danawa-member-joinStep-tap-member-on').attr('class','on');
+}	
 function doDisplay3(){
 	var con3 = document.getElementById("danawa-member-joinStep-guide-textDesc-mailing");
 	if(con3.style.display=='none') {
@@ -76,6 +89,26 @@ function doDisplay3(){
 		con3.style.display='none';
 	}
 }		
+
+$(document).ready(function () {
+                     //이메일 domain선택 selectBox
+                   $('#danawa-member-joinStep-selectBox-email').change(function(){
+                   $("#danawa-member-joinStep-selectBox-email option:selected").each(function () {
+                   //직접입력일 경우
+                   console.log($(this).val());
+                   if($(this).val()== '1'){
+                               $("#danawa-member-joinStep-member-email-emailSecond").val('');                             //textBox값 초기화
+                               $("#danawa-member-joinStep-member-email-emailSecond").attr("disabled",false);    //textBox 활성화
+                   }
+                   else{
+                             $("#danawa-member-joinStep-member-email-emailSecond").val($(this).text());      //selectBox에서 선택한 값을 textBox에 입력
+                             $("#danawa-member-joinStep-member-email-emailSecond").attr("disabled",true); //textBox 비활성화
+                   }
+                   });
+                     });
+
+});
+
 
 $( document).ready( function() {
     $( '.check-all' ).click( function() {
@@ -142,6 +175,9 @@ $( document).ready( function() {
 			var password = $('#danawa-member-joinStep-member-password').val();
 			var password2 = $('#danawa-member-joinStep-member-passwordConfim').val();
 		    var nickname = $('#danawa-member-joinStep-member-nickname').val();
+		    var email = $('#danawa-member-joinStep-member-email-emailFirst').val();
+		    var email2 = $('#danawa-member-joinStep-member-email-emailSecond').val();
+		    var nickname = $('#danawa-member-joinStep-member-nickname').val();
 		    var name = $('#danawa-member-joinStep-member-name').val();
 	     	if(!$("input:checkbox[id='danawa-member-joinStep-checkBox-agree-service']").is(":checked")){
 	      		window.alert("서비스 이용 동의 체크 필수");
@@ -155,6 +191,16 @@ $( document).ready( function() {
 	      		window.alert("나이 확인 필수");
 				return false;
 	   		 }
+		    if(email == "" || email== null) {
+				window.alert("이메일을 입력하시오");
+				document.getElementById('danawa-member-joinStep-member-email-emailFirst').focus();
+				return false;
+			}
+		    if(email2 == "" || email2== null) {
+		    	window.alert("이메일을 입력하시오");
+				document.getElementById('danawa-member-joinStep-member-email-emailSecond').focus();
+				return false;
+			}
 		    if(id == "" || id== null) {
 				window.alert("아이디를 입력하시오");
 				document.getElementById('danawa-member-joinStep-member-id').focus();
@@ -192,6 +238,7 @@ $( document).ready( function() {
 			sigin();
 		}
 
+
 		    function passwordCheckFunction(){
 				var password = $('#danawa-member-joinStep-member-password').val();
 				var password2 = $('#danawa-member-joinStep-member-passwordConfim').val();
@@ -200,6 +247,17 @@ $( document).ready( function() {
 		        }
 		        else{
 		            $('#abc').html("");
+		        }
+		    }
+		    function emailcheck(){
+		    	 var email = $('#danawa-member-joinStep-member-email-emailSecond').val()
+		    	 var emailcheck = email.substr(email.length -4);
+		        console.log(emailcheck);
+		    	 if(emailcheck !=".com" || emailcheck !=".co.kr"){
+		            $('#em').html("올바른 이메일 형식이 아님");
+		        }
+		        else{
+		            $('#em').html("");
 		        }
 		    }
 			function sigin() {
@@ -226,23 +284,6 @@ $( document).ready( function() {
 			}
  
 		</script> 
-		<style type="text/css">
-	.ab,.check-all {
-    position: absolute;
-    top: 50%;
-    right: 1px;
-    width: 22px;
-    height: 21px;
-    z-index: 9;
-    margin-top: -11px;
-    opacity: 0;
-    outline: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-		</style>
 	</head>
 	<body>
 		<form name="frm_Info" method="post" id="danawa-member-joinStep-form-id">
@@ -266,10 +307,10 @@ $( document).ready( function() {
 						<div class="join_top_area">
 							<ul class="join_tap">
 								<li class="tab_li tap_member_join" id="danawa-member-joinStep-tap-member">
-									<h3 id="danawa-member-joinStep-tap-member-on"><a href="javascript:;" title="개인 회원"><span>개인 회원</span></a></h3><!-- 활성화시 on클래스 추가 -->
+									<h3 class="on" id="danawa-member-joinStep-tap-member-on"><a href="#" onclick="Display3f();" title="개인 회원"><span>개인 회원</span></a></h3><!-- 활성화시 on클래스 추가 -->
 								</li>
 								<li class="tab_li tab_company_join" id="danawa-member-joinStep-tap-company">
-									<h3 id="danawa-member-joinStep-tap-company-on"><a href="#" onclick="return false;" title="사업자 회원"><span>사업자 회원</span></a></h3>
+									<h3 id="danawa-member-joinStep-tap-company-on"><a href="#"  onclick="Display2f();" title="사업자 회원"><span>사업자 회원</span></a></h3>
 								</li>
 							</ul>
 							<div class="sns_login_wrap" id="danawa-member-joinStep-snsLogin" style="display:none;">
@@ -1121,9 +1162,9 @@ $( document).ready( function() {
 											</div>
 											<span class="input_wrap email_certi1"><input type="text" id="danawa-member-joinStep-member-email-emailFirst" title="이메일 앞자리 입력창" class="" /></span>
 											<span class="email_at">@</span>
-											<span class="input_wrap email_certi2"><input type="text" id="danawa-member-joinStep-member-email-emailSecond" title="이메일 뒷자리 입력창" class="" /></span>
-											<select id="danawa-member-joinStep-selectBox-email" title="이메일 뒷자리 선택" class="slct_email_tail">
-												<option value="">직접입력</option>
+											<span class="input_wrap email_certi2"><input type="text" onkeyup="emailcheck();" id="danawa-member-joinStep-member-email-emailSecond" title="이메일 뒷자리 입력창" class=""  /></span>
+											<select id="danawa-member-joinStep-selectBox-email" title="이메일 뒷자리 선택" class="slct_email_tail" >
+												<option value="1">직접입력</option>
 												<option value="naver.com">naver.com</option>
 												<option value="hanmail.net">hanmail.net</option>
 												<option value="nate.com">nate.com</option>
@@ -1133,6 +1174,7 @@ $( document).ready( function() {
 												<option value="empal.com">empal.com</option>
 												<option value="korea.com">korea.com</option>
 											</select>
+											<p id="em"></p>
 											<span class="input_alert_txt" id="danawa-member-joinStep-message-email"></span>
 										</dd>
 									</dl>
@@ -1146,7 +1188,7 @@ $( document).ready( function() {
 									<dl class="contents_row">
 										<dt><label for="danawa-member-joinStep-member-password" class="input_title" title="비밀번호 필수 입력 항목">비밀번호*</label></dt>
 										<dd>
-											<span class="input_wrap"><input type="password" id="danawa-member-joinStep-member-password" name="memberPwd" title="비밀번호 입력창" /></span>
+											<span class="input_wrap"><input type="password" id="danawa-member-joinStep-member-password" name="memberPwd"  onkeyup="passwordCheckFunction(this)" title="비밀번호 입력창" /></span>
 											<span class="input_alert_txt" id="danawa-member-joinStep-message-password"></span>
 										</dd>
 									</dl>
