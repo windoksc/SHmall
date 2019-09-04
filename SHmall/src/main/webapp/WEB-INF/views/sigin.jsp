@@ -8,8 +8,7 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <head>
-		<title>다나와 회원가입</title>
-	
+		<title> 회원가입</title>
 	<link rel="shortcut icon" href="//img.danawa.com/new/danawa_main/v1/img/danawa_favicon.ico" />
 	<script type="text/javascript" src="/resources/js/util/envUtils.js?v=10"></script>
 		<link href="//static.danawa.com/new/recss/member_new.css?v=10" rel="stylesheet" type="text/css" />
@@ -61,8 +60,189 @@ function doDisplay(){
         con.style.display = 'none';
     }
 }
-			
+function doDisplay2(){
+	var con2 = document.getElementById("danawa-member-joinStep-guide-textDesc-privacy");
+	if(con2.style.display=='none') {
+		con2.style.display='block';
+	} else {
+		con2.style.display='none';
+	}
+}		
+function doDisplay3(){
+	var con3 = document.getElementById("danawa-member-joinStep-guide-textDesc-mailing");
+	if(con3.style.display=='none') {
+		con3.style.display='block';
+	} else {
+		con3.style.display='none';
+	}
+}		
+
+$( document).ready( function() {
+    $( '.check-all' ).click( function() {
+    	if($("input:checkbox[id='danawa-member-joinStep-checkBox-agree-all']").is(":checked",true)){
+      		$('.lb_chk_box').attr('class','lb_chk_box on');
+    		$( '.ab' ).prop( 'checked', true);
+   		 } else {
+   			console.log(5);
+   			$('.lb_chk_box.on').attr('class','lb_chk_box');
+   			$( '.ab' ).prop("checked",false);
+    	}
+    });
+  });
+$( document).ready( function() {
+    $('#danawa-member-joinStep-checkBox-agree-service').click( function() {
+    	if($("input:checkbox[id='danawa-member-joinStep-checkBox-agree-service']").is(":checked",true)){
+      		$('#service').attr('class','lb_chk_box on');
+    		$( '#danawa-member-joinStep-checkBox-agree-service' ).prop( 'checked', true);
+   		 } else {
+   			
+   			$('#service').attr('class','lb_chk_box');
+   			$( '#danawa-member-joinStep-checkBox-agree-service' ).prop( 'checked', false);
+    	}
+    });
+  });
+$( document).ready( function() {
+    $('#danawa-member-joinStep-checkBox-agree-privacy').click( function() {
+    	if($("input:checkbox[id='danawa-member-joinStep-checkBox-agree-privacy']").is(":checked",true)){
+      		$('#privacy').attr('class','lb_chk_box on');
+    		$( '#danawa-member-joinStep-checkBox-agree-privacy' ).prop( 'checked', true);
+   		 } else {
+   			
+   			$('#privacy').attr('class','lb_chk_box');
+   			$( '#danawa-member-joinStep-checkBox-agree-privacy' ).prop( 'checked', false);
+    	}
+    });
+  });
+$( document).ready( function() {
+    $('#danawa-member-joinStep-checkBox-agree-age').click( function() {
+    	if($("input:checkbox[id='danawa-member-joinStep-checkBox-agree-age']").is(":checked",true)){
+      		$('#age').attr('class','lb_chk_box on');
+    		$( '#danawa-member-joinStep-checkBox-agree-age' ).prop( 'checked', true);
+   		 } else {
+   			
+   			$('#age').attr('class','lb_chk_box');
+   			$( '#danawa-member-joinStep-checkBox-agree-age' ).prop( 'checked', false);
+    	}
+    });
+  });
+$( document).ready( function() {
+    $('#danawa-member-joinStep-checkBox-agree-mailing').click( function() {
+    	if($("input:checkbox[id='danawa-member-joinStep-checkBox-agree-mailing']").is(":checked",true)){
+      		$('#mailing').attr('class','lb_chk_box on');
+    		$( '#danawa-member-joinStep-checkBox-agree-mailing' ).prop( 'checked', true);
+   		 } else {
+   			$('#mailing').attr('class','lb_chk_box');
+   			$( '#danawa-member-joinStep-checkBox-agree-mailing' ).prop( 'checked', false);
+    	}
+    });
+  });
+ function checkForm() {
+	 console.log(6);
+			var id = $('#danawa-member-joinStep-member-id').val();
+			var password = $('#danawa-member-joinStep-member-password').val();
+			var password2 = $('#danawa-member-joinStep-member-passwordConfim').val();
+		    var nickname = $('#danawa-member-joinStep-member-nickname').val();
+		    var name = $('#danawa-member-joinStep-member-name').val();
+	     	if(!$("input:checkbox[id='danawa-member-joinStep-checkBox-agree-service']").is(":checked")){
+	      		window.alert("서비스 이용 동의 체크 필수");
+	      		return false;
+	   		 }
+	     	if(!$("input:checkbox[id='danawa-member-joinStep-checkBox-agree-privacy']").is(":checked")){
+	      		window.alert("개인정보 동의란 체크 필수");
+	      		return false;
+	   		 }
+		    if(!$("input:checkbox[id='danawa-member-joinStep-checkBox-agree-age']").is(":checked")){
+	      		window.alert("나이 확인 필수");
+				return false;
+	   		 }
+		    if(id == "" || id== null) {
+				window.alert("아이디를 입력하시오");
+				document.getElementById('danawa-member-joinStep-member-id').focus();
+				return false;
+			}
+// 			if(sss == 1) {
+// 				window.alert("아이디 중복 체크 하시오");
+// 				return false;		
+// 			}
+			if(password =="" || password==null) {
+				window.alert("비밀번호를 입력하시오");
+				document.getElementById('danawa-member-joinStep-member-password').focus();
+				return false;
+			} 
+			if(password2 =="" || password2==null) {
+				window.alert("비밀번호 확인란을 입력하시오");
+				document.getElementById('#anawa-member-joinStep-member-passwordConfim').focus();
+				return false;
+			} 
+			if(name =="" || name==null) {
+				window.alert("이름을 입력하시오");
+				document.getElementById('danawa-member-joinStep-member-name').focus();
+				return false;
+			} 
+			if(nickname =="" || nickname==null) {
+				window.alert("닉네임을 입력하시오");
+				document.getElementById('danawa-member-joinStep-member-nickname').focus();
+				return false;
+			} 
+			if(password!=password2) {
+				window.alert("비밀번호가 일치하지 않습니다");
+				document.getElementById('danawa-member-joinStep-member-passwordConfim').focus();
+				return false;
+			}
+			sigin();
+		}
+
+		    function passwordCheckFunction(){
+				var password = $('#danawa-member-joinStep-member-password').val();
+				var password2 = $('#danawa-member-joinStep-member-passwordConfim').val();
+		        if(password!=password2){
+		            $('#abc').html("비밀번호가 일치하지 않습니다");
+		        }
+		        else{
+		            $('#abc').html("");
+		        }
+		    }
+			function sigin() {
+				var params = jQuery("#danawa-member-joinStep-form-id").serialize(); 
+//	 			if(isNaN(params)) {
+//	 				alert("숫자만 입력 가능");
+//	 				return;
+//	 			}
+				jQuery.ajax({
+					url : 'inset',
+					type : 'POST',
+					dataType : 'json',
+					contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
+					data : params,
+					success : function(data) {
+						if (data == 0) {
+							alert("회원가입완료");
+							location.href="homes";
+						} else {
+							alert("오류");
+						}
+					}
+				});
+			}
+ 
 		</script> 
+		<style type="text/css">
+	.ab,.check-all {
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    width: 22px;
+    height: 21px;
+    z-index: 9;
+    margin-top: -11px;
+    opacity: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+		</style>
 	</head>
 	<body>
 		<form name="frm_Info" method="post" id="danawa-member-joinStep-form-id">
@@ -76,7 +256,7 @@ function doDisplay(){
 				<div class="join_member"><!-- join_member 클래스추가 -->
 					<!-- guide_header -->
 					<div id="danawa-member-joinStep-danawaLogo" class="guide_header">
-						<h1><a href="http://www.danawa.com">danawa.com</a></h1>
+<!-- 						<h1><a href="http://www.danawa.com">danawa.com</a></h1> -->
 						<h2 class="tit_join_top tit_join_member">회원가입</h2>
 					</div>
 					<!-- //guide_header -->
@@ -116,27 +296,28 @@ function doDisplay(){
 								<div class="checkbox_wrap">
 		                            <!-- 웹접근성을 위해 input의 id값과 label의 for값을 동일하게 해주세요.-->
 		                            <!-- 1702 라벨 클릭 시 클래스 on 추가  -->
-		                            <label for="danawa-member-joinStep-checkBox-agree-all" class="lb_chk_box" title="다나와 회원가입 약관에 모두 동의합니다. 필수 입력 항목"><strong>다나와 회원가입 약관에 모두 동의합니다.</strong></label>
+		                            <label for="danawa-member-joinStep-checkBox-agree-all" id="as" class="lb_chk_box" title="회원가입 약관에 모두 동의합니다. 필수 입력 항목"><strong>회원가입 약관에 모두 동의합니다.</strong></label>
 		                            <!--1702 웹접근성 포커스 (Tab키) 이동 시 클래스 focus 추가 탭키 이동 관련 개발 필요 -->
-		                            <input class="input_check focus" type="checkbox" id="danawa-member-joinStep-checkBox-agree-all" title="[체크박스]" />
+		                            <input type="checkbox" id="danawa-member-joinStep-checkBox-agree-all" class="check-all" title="[체크박스]"  />
 		                        </div>
 							</div>
+							
 							<!-- join_box -->
 							<div class="join_box join_agree_box">
 								<div class="agree_con agree_con1">
 									<h5 class="tit_h5">
 										<!-- 1702 라벨 클릭 시 클래스 on 추가 -->
-										<label for="danawa-member-joinStep-checkBox-agree-service" class="lb_chk_box" title="서비스 이용 약관 필수 입력 항목">
+										<label for="danawa-member-joinStep-checkBox-agree-service" id="service" class="lb_chk_box" title="서비스 이용 약관 필수 입력 항목">
 											<strong>서비스 이용 약관</strong>
 											<span> (필수)</span>
-											<span class="blind">다나와 서비스 이용 약관에 동의합니다.</span>
+											<span class="blind"> 서비스 이용 약관에 동의합니다.</span>
 										</label>
 										<!--1702 약관보기 클릭 시 클래스 on 과 내용닫기 텍스트 변경 -->
 										<span class="btn_view ico on">
 											<button type="button" onclick="javascript:doDisplay();" id="danawa-member-joinStep-guide-button-service" title="약관보기 버튼 누르면 상세 내용이 열립니다">약관보기 ▼</button>
 										</span>
 										<!--1702 웹접근성 포커스 (Tab키) 이동 시 클래스 focus 추가 탭키 이동 관련 개발 필요 -->
-                               			<input class="input_check" type="checkbox" id="danawa-member-joinStep-checkBox-agree-service" title="[체크박스]" />
+                               			<input type="checkbox" id="danawa-member-joinStep-checkBox-agree-service" class="ab" title="[체크박스]" />
                                	 	</h5>
 									<div class="agree_textarea_wrap">
 										<textarea readonly="readonly"  class="textarea_member" id="danawa-member-joinStep-guide-textDesc-service" cols="" rows="" style="display:none;" title="서비스 이용 약관 안내 내용"></textarea>
@@ -147,11 +328,11 @@ function doDisplay(){
 
 제 1 조 (목 적)
 
-이 약관은 ㈜다나와 (전자상거래 사업자)가 운영하는 인터넷 서비스 "다나와" (www.danawa.com) 및 다나와 관련 제반 서비스 사이트(접속 가능한 유,무선 단말기의 종류와는 상관없이 이용 가능한 '회사' 가 제공하는 모든 "서비스" 를 의미하며, 이하 '사이트'라 함)에서 제공하는 상품 및 가격정보 등 상품에 대한 정보 제공 및 광고서비스를 이용함에 있어 '회사' 와 이용자의 권리와 의무 및 책임사항 등을 규정함을 그 목적으로 합니다.
+이 약관은 ㈜ (전자상거래 사업자)가 운영하는 인터넷 서비스 "" (www.danawa.com) 및  관련 제반 서비스 사이트(접속 가능한 유,무선 단말기의 종류와는 상관없이 이용 가능한 '회사' 가 제공하는 모든 "서비스" 를 의미하며, 이하 '사이트'라 함)에서 제공하는 상품 및 가격정보 등 상품에 대한 정보 제공 및 광고서비스를 이용함에 있어 '회사' 와 이용자의 권리와 의무 및 책임사항 등을 규정함을 그 목적으로 합니다.
 
 제 2 조 (정의)
 
-① '회사' 란 ㈜다나와가 재화 또는 용역(이하 '상품'이라 함) 및 서비스를 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 상품을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 '회사' 를 운영하는 사업자의 의미로도 사용합니다.
+① '회사' 란 ㈜가 재화 또는 용역(이하 '상품'이라 함) 및 서비스를 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 상품을 거래할 수 있도록 설정한 가상의 영업장을 말하며, 아울러 '회사' 를 운영하는 사업자의 의미로도 사용합니다.
 ② '서비스' 란 '회사' 와 계약을 통하여 입점 및 제휴한 쇼핑몰들의 상품 및 가격정보를 비교하여 회원의 구매를 돕는 서비스 및 기타 각종 서비스를 의미합니다 
 ③ '이용자'란 '회사' 에 접속하여 이 약관에 따라 '회사' 가 제공하는 서비스를 받는 회원 및 비회원을 말합니다. 
 ④ '회원'이라 함은 '회사' 에 개인정보를 제공하여 회원등록을 한 자로서, '회사' 의 정보를 지속적으로 제공받으며, '회사' 가 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다. 
@@ -414,7 +595,7 @@ function doDisplay(){
 
 제 1 조 (목적)
 
-본 약관은 ㈜다나와(이하 '회사' 라 함)가 운영하는 인터넷 서비스 "다나와"(www.danawa.com) 및 다나와 관련 제반 서비스 사이트
+본 약관은 ㈜(이하 '회사' 라 함)가 운영하는 인터넷 서비스 ""(www.danawa.com) 및  관련 제반 서비스 사이트
 (접속 가능한 유/무선 단말기의 종류와는 상관없이 이용 가능한 '회사' 가 제공하는 모든 "서비스"를 의미하며, 이하 '사이트' 라 함)를 통한 
 각 협력사(이하 '업체회원' 이라 함)가 제공하는 상품명, 상품가격 등 상품관련 정보 제공 및 광고의 노출 등 '회사' 의 제반 서비스를 이용함에 있어 
 '회사' 와 '업체회원' 간의 권리와 의무를 규정함을 목적으로 합니다. 
@@ -705,19 +886,19 @@ function doDisplay(){
 										</textarea>
 									</div>
 								</div>
-								<div class="agree_con agree_con2">
+								<div class="agree_con agree_con2" id="agree">
 									<h5 class="tit_h5">
 										<!-- 1702 라벨 클릭 시 클래스 on 추가 -->
-										<label for="danawa-member-joinStep-checkBox-agree-privacy" class="lb_chk_box" title="개인정보 수집 및 이용 안내 필수 입력 항목">
+										<label for="danawa-member-joinStep-checkBox-agree-privacy" id="privacy" class="lb_chk_box" title="개인정보 수집 및 이용 안내 필수 입력 항목">
 											<strong>개인정보 수집 및 이용 안내</strong>
 											<span> (필수)</span>
 										</label>
 										<!--1702 약관보기 클릭 시 클래스 on 과 내용닫기 텍스트 변경 -->
 										<span class="btn_view ico">
-											<button type="button" id="danawa-member-joinStep-guide-button-privacy" title="약관보기 버튼 누르면 상세 내용이 열립니다">약관보기 ▼</button>
+											<button type="button" onclick="javascript:doDisplay2();" id="danawa-member-joinStep-guide-button-privacy" title="약관보기 버튼 누르면 상세 내용이 열립니다">약관보기 ▼</button>
 										</span>
 										<!--1702 웹접근성 포커스 (Tab키) 이동 시 클래스 focus 추가 탭키 이동 관련 개발 필요 -->
-										<input class="input_check" type="checkbox" id="danawa-member-joinStep-checkBox-agree-privacy" title="[체크박스]" />
+										<input class="ab" type="checkbox"  id="danawa-member-joinStep-checkBox-agree-privacy" title="[체크박스]" />
 									</h5>
 									<div class="agree_textarea_wrap" id="danawa-member-joinStep-guide-textDesc-privacy" style="display:none;" title="개인정보 수집 및 이용 안내 내용">
 										
@@ -826,7 +1007,7 @@ function doDisplay(){
 			나. 회사는 다음과 같은 목적으로 개인정보를 수집하여 이용할 수 있습니다. 다만, 전자상거래 등에서의 소비자보호에 관한 법률, 국세기본법, 전자금융거래법 등 관련법령에 따라 주민등록번호 및 은행계좌번호의 수집·보관이 불가피한 경우에는 이용자에게 고지하여 해당 정보를 수집할 수 있습니다. <br><br>
 
 			[회원관리] <br>
-			회원제 서비스 이용 및 특정 서비스 이용 단계에서 제한적 본인 확인제에 따른 본인확인, 개인식별, 가입의사 확인, 다나와 이용약관에 위배되는 회원의 부정이용방지, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 신규서비스 및 신상품이나 이벤트 정보안내 <br> <br>
+			회원제 서비스 이용 및 특정 서비스 이용 단계에서 제한적 본인 확인제에 따른 본인확인, 개인식별, 가입의사 확인,  이용약관에 위배되는 회원의 부정이용방지, 분쟁 조정을 위한 기록보존, 불만처리 등 민원처리, 신규서비스 및 신상품이나 이벤트 정보안내 <br> <br>
 
 			[서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산] <br>
 			컨텐츠 제공, 특정 맞춤 서비스 제공, 물품배송 또는 청구서 등 발송, 본인인증, 구매 및 요금 결제, 요금추심 <br> <br>
@@ -854,7 +1035,7 @@ function doDisplay(){
 			보존 이유 : 통신비밀보호법 <br>
 			보존 기간 : 3개월 <br> <br>
 
-			나. 가입자가 1년간 다나와에서 이용 기록이 없을 시, 서비스 미이용자의 개인정보는 '정보통신망 이용촉진 및 정보보호등에 관한 법률 제29조' 에 근거하여 이용자에게 사전통지하고 개인정보를 별도로 분리하여 저장 관리합니다. <br> <br>
+			나. 가입자가 1년간 에서 이용 기록이 없을 시, 서비스 미이용자의 개인정보는 '정보통신망 이용촉진 및 정보보호등에 관한 법률 제29조' 에 근거하여 이용자에게 사전통지하고 개인정보를 별도로 분리하여 저장 관리합니다. <br> <br>
 
 		</p>
 	</div>
@@ -865,29 +1046,29 @@ function doDisplay(){
 								<div class="agree_con agree_con3">
 		                            <h5 class="tit_h5">
 			                            <!-- 1702 라벨 클릭 시 클래스 on 추가 -->
-			                            <label for="danawa-member-joinStep-checkBox-agree-age" class="lb_chk_box" title="만 14세 이상 확인 필수 입력 항목"> 
+			                            <label for="danawa-member-joinStep-checkBox-agree-age" id="age" class="lb_chk_box" title="만 14세 이상 확인 필수 입력 항목"> 
 				                            <strong>만 14세 이상 확인</strong>
 				                            <span> (필수)</span>
-				                            <span class="txt_grey"> 다나와는 만 14세 이상부터 회원가입이 가능합니다.</span>
+				                            <span class="txt_grey"> 는 만 14세 이상부터 회원가입이 가능합니다.</span>
 			                            </label>
 			                            <!--1702 웹접근성 포커스 (Tab키) 이동 시 클래스 focus 추가 탭키 이동 관련 개발 필요 -->
-			                            <input class="input_check" type="checkbox" id="danawa-member-joinStep-checkBox-agree-age" title="[체크박스]" />
+			                            <input class="ab" type="checkbox" id="danawa-member-joinStep-checkBox-agree-age" title="[체크박스]" />
 		                            </h5>
 	                            	<!-- 웹접근성을 위해 textarea의 id값과 label의 for값을 동일하게 해주세요.-->
 	                        	</div>
 								<div class="agree_con agree_con4">
 		                            <h5 class="tit_h5">
 			                            <!-- 1702 라벨 클릭 시 클래스 on 추가 -->
-			                            <label for="danawa-member-joinStep-checkBox-agree-mailing" class="lb_chk_box" title="메일 수신 여부 항목">
+			                            <label for="danawa-member-joinStep-checkBox-agree-mailing" id="mailing" class="lb_chk_box" title="메일 수신 여부 항목">
 				                            <strong>메일 수신 여부</strong>
 				                            <span class="txt_blue"> (선택)</span>
 			                            </label>
 			                            <!--1702 약관보기 클릭 시 클래스 on 과 내용닫기 텍스트 변경 -->
 			                            <span class="btn_view ico">
-			                            <button type="button" id="danawa-member-joinStep-guide-button-mailing" title="약관보기 버튼 누르면 상세 내용이 열립니다">약관보기 ▼</button>
+			                            <button type="button" onclick="javascript:doDisplay3();" id="danawa-member-joinStep-guide-button-mailing" title="약관보기 버튼 누르면 상세 내용이 열립니다">약관보기 ▼</button>
 			                            </span>
 			                            <!--1702 웹접근성 포커스 (Tab키) 이동 시 클래스 focus 추가 탭키 이동 관련 개발 필요 -->
-			                            <input class="input_check" type="checkbox" id="danawa-member-joinStep-checkBox-agree-mailing" name="useMailing" value="Y"  title="[체크박스]" />
+			                            <input class="input_check" type="checkbox"  id="danawa-member-joinStep-checkBox-agree-mailing" name="useMailing" value="Y"  title="[체크박스]" />
 		                            </h5>
 		                            <!-- 웹접근성을 위해 textarea의 id값과 label의 for값을 동일하게 해주세요.-->
 	                            
@@ -929,7 +1110,7 @@ function doDisplay(){
 							<!-- join_box -->
 							<div class="join_box join_input_box">
 								<!-- 20160128 btn_inpt_error -->
-								<a href="/pwdRule" target="_blank" class="btn_inpt_error" title="입력한 내용이 자꾸 초기화 되시나요? 내용 새 창이 열립니다.">입력한 내용이 자꾸 초기화 되시나요?</a>
+<!-- 								<a href="/pwdRule" target="_blank" class="btn_inpt_error" title="입력한 내용이 자꾸 초기화 되시나요? 내용 새 창이 열립니다.">입력한 내용이 자꾸 초기화 되시나요?</a> -->
 								<div class="join_input_area">
 									<dl class="contents_row">
 										<dt><label for="danawa-member-joinStep-member-email-emailFirst" class="input_title" title="이메일 필수 입력 항목">이메일*</label></dt>
@@ -970,10 +1151,12 @@ function doDisplay(){
 										</dd>
 									</dl>
 									<dl class="contents_row">
-										<dt><label for="danawa-member-joinStep-member-passwordConfim" class="input_title" title="비밀번호 확인 필수 입력 항목">비밀번호확인*</label></dt>
+										<dt><label for="danawa-member-joinStep-member-passwordConfim"  class="input_title" title="비밀번호 확인 필수 입력 항목">비밀번호확인*</label></dt>
 										<dd>
-											<span class="input_wrap"><input type="password" id="danawa-member-joinStep-member-passwordConfim" name="memberPwdConfirm" title="비밀번호 확인 입력창" /></span>
+											<span class="input_wrap"><input type="password" id="danawa-member-joinStep-member-passwordConfim" onkeyup="passwordCheckFunction(this)"  name="memberPwdConfirm" title="비밀번호 확인 입력창" /></span>
 											<span class="input_alert_txt" id="danawa-member-joinStep-message-passwordConfirm"></span>
+											<p id="abc"></p>
+											
 										</dd>
 									</dl>
 									<dl class="contents_row">
@@ -1023,7 +1206,7 @@ function doDisplay(){
 									</div>
 									<!-- //사업자 정보 입력 -->
 									<div class="bottom_btn_area">
-										<a href="javascript:;" id="danawa-member-joinStep-memberJoin" onclick="return false;" class="btn_join_sty1" title="확인 버튼 누르면 회원가입이 완료됩니다.">확인</a>
+										<a href="javascript:;" id="danawa-member-joinStep-memberJoin" onclick="return checkForm();" class="btn_join_sty1" title="확인 버튼 누르면 회원가입이 완료됩니다.">확인</a>
 									</div>
 								</div>
 							</div>
@@ -1036,7 +1219,7 @@ function doDisplay(){
 					<!-- footer_type1 -->
 					<div class="footer_type1">
 		                <div class="dnw_service_wrap">
-		                    <p class="tit"><span class="blue_txt">다나와 서비스 이용</span>을 환영합니다.</p>
+		                    <p class="tit"><span class="blue_txt"> 서비스 이용</span>을 환영합니다.</p>
 		                </div>
 		                <address>Copyright&copy; <strong>danawa</strong> Co., Ltd. All Rights Reserved.</address>
 		            </div>
