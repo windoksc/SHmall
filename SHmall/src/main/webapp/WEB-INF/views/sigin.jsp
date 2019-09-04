@@ -285,6 +285,7 @@ $( document).ready( function() {
  
 		</script> 
 	</head>
+	<!-- a -->
 	<body>
 		<form name="frm_Info" method="post" id="danawa-member-joinStep-form-id">
 			<!-- 회원타입 : G - 개인, D - 사업자 -->
