@@ -76,14 +76,14 @@ public class HomeController {
 	@RequestMapping(value = "siginup", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody 
 	public int singup(HttpServletRequest request, HttpServletResponse resp) throws Exception {
-		
 		HashMap<String,Object> map = new HashMap<String, Object>();
-		map.put("email",request.getParameter("email"));
-		map.put("id",request.getParameter("id"));
-		map.put("password",request.getParameter("password"));
-		map.put("name",request.getParameter("name"));
-		map.put("name",request.getParameter("nick"));
-		s.singup(map);
+		map.put("id",request.getParameter("memberId"));
+		map.put("password",request.getParameter("memberPwd"));
+		map.put("name",request.getParameter("memberName"));
+		map.put("nickname",request.getParameter("memberNickname"));
+		System.out.println("ют╥б");
+		System.out.println(request.getParameter("memberPwd"));
+//		s.singup(map);
 		return 0;
 	}
 	

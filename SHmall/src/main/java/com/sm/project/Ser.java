@@ -21,6 +21,7 @@ public class Ser {
 	public int login(Map<String,Object> login) throws Exception {
 		return sqlSession.selectOne("login",login);
 	}
+	
 	public void singup(Map<String,Object> map) throws Exception {
 		 sqlSession.insert("singup", map);
 	}
