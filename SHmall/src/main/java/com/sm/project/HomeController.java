@@ -49,6 +49,12 @@ public class HomeController {
 		
 		return "sigin";
 	}
+	
+	@RequestMapping(value = "main", method = { RequestMethod.GET, RequestMethod.POST })
+	public String main(Locale locale, Model model) {
+		
+		return "main";
+	}
 	@RequestMapping(value = "login", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public int login(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
@@ -81,7 +87,7 @@ public class HomeController {
 		map.put("password",request.getParameter("memberPwd"));
 		map.put("name",request.getParameter("memberName"));
 		map.put("nickname",request.getParameter("memberNickname"));
-		System.out.println("ют╥б");
+		System.out.println("О©╫т╥О©╫");
 		System.out.println(request.getParameter("memberPwd"));
 //		s.singup(map);
 		return 0;
