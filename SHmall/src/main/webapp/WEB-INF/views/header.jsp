@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title></title>
 </head>
 <body>
 	<div id="header">
@@ -13,6 +13,7 @@
 			
 			<div class="category">
 				<ul class="cate0">
+					<li><a href="">HOME</a></li>
 					<li><a href="">TOP</a></li>
 					<li><a href="">PANTS</a></li>
 					

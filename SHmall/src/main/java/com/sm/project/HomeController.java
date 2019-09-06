@@ -90,8 +90,9 @@ public class HomeController {
 	@ResponseBody
 	public String logout(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		httpSession.invalidate();
-		return "home";
-	}	
+		return "main";
+	}
+	
 	@RequestMapping(value = "cart", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public int cart(Session session,HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
@@ -138,7 +139,7 @@ public class HomeController {
 		s.singup(map);
 
 		map.put("nickname",request.getParameter("memberNickname"));
-		System.out.println("�Է�");
+		//System.out.println("�Է�");
 		System.out.println(request.getParameter("memberPwd"));
 //		s.singup(map);
 
