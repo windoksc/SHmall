@@ -16,13 +16,13 @@ public class Ser {
 	
 	@Autowired
 	private SqlSession sqlSession;
-	private static final String Namespace = "com.com.mapper.memberMapper";
+	private static final String Namespace = "com.sm.project.mapper.memberMapper";
 	
 	public int login(Map<String,Object> login) throws Exception {
 		return sqlSession.selectOne("login",login);
 	}
 	public void singup(Map<String,Object> map) throws Exception {
-		 sqlSession.insert("singup", map);
+		 sqlSession.insert("sigin", map);
 	}
 
 }

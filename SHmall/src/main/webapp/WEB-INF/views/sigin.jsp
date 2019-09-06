@@ -235,6 +235,12 @@ $( document).ready( function() {
 				document.getElementById('danawa-member-joinStep-member-passwordConfim').focus();
 				return false;
 			}
+// 			 var email = $('#danawa-member-joinStep-member-email-emailSecond').val()
+// 	    	 var emailcheck = email.substr(email.length -4);
+// 	        console.log(emailcheck);
+// 	    	 if(emailcheck !=".com" || emailcheck !=".co.kr"){
+// 	            $('#em').html("올바른 이메일 형식이 아님");
+// 	        }
 			sigin();
 		}
 
@@ -249,17 +255,7 @@ $( document).ready( function() {
 		            $('#abc').html("");
 		        }
 		    }
-		    function emailcheck(){
-		    	 var email = $('#danawa-member-joinStep-member-email-emailSecond').val()
-		    	 var emailcheck = email.substr(email.length -4);
-		        console.log(emailcheck);
-		    	 if(emailcheck !=".com" || emailcheck !=".co.kr"){
-		            $('#em').html("올바른 이메일 형식이 아님");
-		        }
-		        else{
-		            $('#em').html("");
-		        }
-		    }
+
 			function sigin() {
 				var params = jQuery("#danawa-member-joinStep-form-id").serialize(); 
 //	 			if(isNaN(params)) {
@@ -1160,9 +1156,9 @@ $( document).ready( function() {
 												<p>- 가입 완료를 위한 이메일 인증이 진행되니 정확한 이메일 주소를 입력해주시기 바랍니다.
 												</p>
 											</div>
-											<span class="input_wrap email_certi1"><input type="text" id="danawa-member-joinStep-member-email-emailFirst" title="이메일 앞자리 입력창" class="" /></span>
+											<span class="input_wrap email_certi1"><input type="text" id="danawa-member-joinStep-member-email-emailFirst" name="firstemail" title="이메일 앞자리 입력창" class="" /></span>
 											<span class="email_at">@</span>
-											<span class="input_wrap email_certi2"><input type="text" onkeyup="emailcheck();" id="danawa-member-joinStep-member-email-emailSecond" title="이메일 뒷자리 입력창" class=""  /></span>
+											<span class="input_wrap email_certi2"><input type="text" onkeyup="emailcheck();" id="danawa-member-joinStep-member-email-emailSecond" name="secendemail" title="이메일 뒷자리 입력창" class=""  /></span>
 											<select id="danawa-member-joinStep-selectBox-email" title="이메일 뒷자리 선택" class="slct_email_tail" >
 												<option value="1">직접입력</option>
 												<option value="naver.com">naver.com</option>

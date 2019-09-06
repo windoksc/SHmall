@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+.location + #container{width:0;margin:0;padding:0}
+
+#contents{width:900px;margin:0 auto;padding:71px 0 130px}
+#contents h1{padding-left:9px}
+
+.current-status{height:29px;margin-top:10px;padding-top:11px; background:url(//pics.gmkt.kr/pc/ko/net/MyInfo/login/bg_current_status.gif) no-repeat 0 0;text-align:center}
+.current-status img{vertical-align:middle}
+.current-status .directly-connected{position:relative;display:inline-block;float:left;margin-right:3px}
+.current-status .directly-connected .directly-connected-layer{position:absolute;left:0;top:18px;width:313px;padding:0 7px 7px;background:#fff;border:2px solid #1478DA;text-align:left}
+.current-status .directly-connected .directly-connected-layer .tit{display:block;padding:9px 0 0 7px;letter-spacing:-1px;color:#888888}
+.current-status .directly-connected .directly-connected-layer .tit strong{font-weight:bold;color:#5CAC17;font-size:11px}
+.current-status .directly-connected .directly-connected-layer .links{display:block;margin-top:5px;padding:9px 0 7px;border:1px solid #DDDDDD;font-size:0;line-height:0}
+.current-status .directly-connected .directly-connected-layer .close{position:absolute;right:6px;top:8px}
+
+.current-status .directly-connected .directly-connected-layer2{*margin-left:3px;position:absolute;left:0;top:18px;width:230px;padding: 9px 9px 5px 9px;background:#fff;border:2px solid #1478DA;text-align:left}
+.current-status .directly-connected .directly-connected-layer2 .close{position:absolute;right:6px;top:8px}
+.current-status .directly-connected .directly-connected-layer2 dl{letter-spacing:-1px;line-height:130%}
+.current-status .directly-connected .directly-connected-layer2 dl dt{color:#888;font-size:11px;font-weight:bold}
+.current-status .directly-connected .directly-connected-layer2 dl dd{color:#666;font-size:11px;}
+.current-status .directly-connected .directly-connected-layer2 dl dd  span{color:#ff4800;font-size:11px}
+
+.location{padding:8px 0 0 12px;font-size:11px;color:#888}
+.location strong{font-weight:bold}
+
+.login-cont{overflow:hidden;width:100%;margin-top:20px;padding-bottom:29px;border-bottom:1px solid #b3b3b3}
+.login-cont .login{float:left;width:450px}
+.login-cont h2{height:32px;margin-bottom:30px;padding:13px 0 0 10px;border-bottom:1px solid #ebebeb}
+.login-cont .login h2{height:32px;padding:13px 0 0 10px;border-bottom:1px solid #ebebeb}
+.login-cont .login h2 span.title_login{overflow:hidden;display:block;width:84px;height:23px;background:url(//pics.gmkt.kr/pc/ko/member/login/tit_login.gif) no-repeat 0 0;text-indent:-999px}
+.login-cont .member-select{padding:30px 0 0 104px;font-size:11px;color:#444}
+.login-cont .member-select.tt_min{padding-top:13px}
+.login-cont .member-select label{margin-left:5px;margin-right:50px}
+.login-cont .member-select .radio{width:13px;height:13px;margin-top:-2px;vertical-align:top}
+.login-cont .login-input{position:relative;z-index:1;margin-top:15px;width:100%;height:110px}
+.login-cont .captcha-input{height:202px}
+.login-cont .login-input .user-input{position:absolute;top:0;left:38px;width:275px}
+.login-cont .login-input .user-input label{display:block;overflow:hidden;width:100%;margin-bottom:8px}
+.login-cont .login-input .user-input label .txt{float:left;width:63px;padding-top:11px}
+.login-cont .login-input .user-input label .input{float:left;height:31px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/input_off_right.gif) no-repeat 100% 0}
+.login-cont .login-input .user-input label .input input{display:block;float:left;height:31px;padding:0 13px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/input_off_left.gif) no-repeat;border:0;font-size:12px;font-weight:bold;color:#0075d4;line-height:31px}
+.login-cont .login-input .user-input label .input-on, .login-cont .login-input .user-input label .input:hover{float:left;height:31px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/input_on_right.gif) no-repeat 100% 0}
+.login-cont .login-input .user-input label .input-on input, .login-cont .login-input .user-input label .input input:hover{display:block;float:left;height:31px;padding:0 13px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/input_on_left.gif) no-repeat;border:0;font-size:12px;font-weight:bold;color:#0075d4;line-height:31px}
+.login-cont .login-input .user-input label .dash{float:left;padding:9px 3px 0}
+.login-cont .login-input .btn-pw{margin-left:8px}
+.login-cont .login-input .btn-login{position:absolute;top:0;left:309px;width:96px}
+.login-cont .login-input .btn-login a{display:inline-block;margin-bottom:7px}
+.login-cont .option{position:absolute;top:84px;left:80px;width:263px;font-size:11px;color:#888}
+.login-cont .captcha-input .option{top:176px}
+.login-cont .option label{margin-left:3px;letter-spacing:-1px;vertical-align:top}
+.login-cont .option .checkbox{width:13px;height:13px;vertical-align:middle;margin-left:21px}
+.login-cont .option img{display:inline-block;*display:inline;*zoom:1;vertical-align:middle}
+
+.login-cont .login .links{padding:12px 45px 0 38px}
+.login-cont .login .links a{margin-right:8px}
+.sp_nomember{overflow:hidden;display:block;background:url(//pics.gmkt.kr/pc/ko/member/login/sprite_nomember.png) no-repeat 0 0;text-indent:-999px}
+.login-cont .login .links .member{padding-left:66px}
+.login-cont .login .links .member a{display:inline-block;height:13px;margin:0;padding:0 15px;border-right:1px solid #999999;font-weight:bold}
+.login-cont .login .links .member a:first-child{padding-left:0}
+.login-cont .login .links .member a.join{border:none;color:#0e6ad3}
+.login-cont .login .links .no_member{clear:both;height:67px;margin-top:15px;padding-top:12px;border-top:1px solid #ebebeb}
+.login-cont .login .links .no_member .txt_info{float:left;width:133px;height:28px;margin-top:20px;background-position: -80px -30px}
+.login-cont .login .links .no_member .btn_login{float:right;width:96px;height:67px;padding:0;border:none;background-position: -220px 0px}
+.login-cont span.title{width:220px;height:23px}
+.login-cont .login-input .user-input label span.sp_nomember{height:12px;margin-top:11px;padding:0}
+.login-cont .login-input .user-input label span.s_tit1{background-position: 0px -30px}
+.login-cont .login-input .user-input label span.s_tit2{background-position: 0px -50px}
+.login-cont .login-input .user-input label span.s_tit3{background-position: 0px -70px}
+.login-cont .login-input .user-input .btn_pw{overflow:hidden;position: absolute;top:78px;right:-93px;width:96px;height:32px;background-position: -220px -80px;border:none;cursor: pointer}
+.login-cont .login-input .btn-login .btn_login{overflow:hidden;width:96px;height:72px;background-position: -330px 0px;border:none;cursor: pointer}
+.login-cont .login-input .txt_fail{width:210px;padding-left:65px;color:#fd2727;font-size:11px}
+.login-cont .login .txt1{padding:20px 0 0 102px;font-size:11px;color:#444}
+.login-cont .login .txt1 strong{color:#0075d4}
+.login-cont .login .txt1 em{color:#ed1e24}
+.login-cont .login .txt2{padding:20px 0 0 39px;font-size:11px;color:#444}
+.login-cont .login .txt3{padding:20px 0 0 102px;font-size:11px;color:#444}
+.login-cont .login .txt3 div{overflow:hidden;width:100%;margin-top:11px}
+.login-cont .login .txt3 span{float:left}
+.login-cont .login .txt3 .input{float:left;height:31px;margin:0 8px 0 4px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/input_off_right.gif) no-repeat 100% 0}
+.login-cont .login .txt3 .input input{display:block;float:left;height:31px;padding:0 13px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/input_off_left.gif) no-repeat;border:0;font-size:12px;font-weight:bold;color:#0075d4;line-height:31px}
+.login-cont .login .txt3 .input-on{float:left;height:31px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/input_on_right.gif) no-repeat 100% 0}
+.login-cont .login .txt3 .input-on input{display:block;float:left;height:31px;padding:0 13px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/input_on_left.gif) no-repeat;border:0;font-size:12px;font-weight:bold;color:#0075d4;line-height:31px}
+.login-cont .login .txt3 a{float:left}
+.login-cont .txt4, .auth_cont .txt4{min-height:76px;margin:30px 0 9px;padding-left:101px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/bg_19_2.gif) no-repeat 13px 50%;line-height:16px;color:#222}
+.login-cont .txt4 strong, .auth_cont .txt4 strong{font-weight:bold}
+.login-cont .txt4 p, .auth_cont .txt4 p{padding-top:10px}
+.login-cont .txt4 p.tt_min, .auth_cont .txt4 p.tt_min{padding-top:25px}
+.login-cont .txt5{padding:20px 0 0 102px;font-size:11px;color:#444;letter-spacing:-1px}
+.login-cont .txt5 strong{color:#0075d4;font-weight:bold}
+.login-cont .banner{float:right;width:425px;margin-top:42px;border:1px solid #f1f1f1}
+
+.login-cont .login .non-members{padding:19px 0 0 39px}
+.login-cont .login .non-members p{font-size:11px;color:#444}
+.login-cont .login .non-members p strong{color:#f81619;font-weight:bold}
+.login-cont .login .non-members div{padding:38px 0 0 65px}
+
+.personal-info{margin-top:-1px;padding:39px 39px 30px;border-top:1px solid #EBEBEB;border-bottom:1px solid #B3B3B3}
+.personal-info .policy{color:#666666}
+.personal-info .policy li{overflow:hidden;margin-top:15px;padding-left:64px;border:1px solid #D7D7D7;zoom:1}
+.personal-info .policy li input{width:13px;height:13px;margin:0}
+.personal-info .policy li .agree{margin-top:2px;padding-right:18px;text-align:right}
+.personal-info .policy li .agree span{display:inline-block;width:130px;text-align:left}
+.personal-info .policy li .agree2{margin-top:10px;padding-right:40px;text-align:right}
+.personal-info .policy li .agree2 span{display:inline-block;width:244px;text-align:left}
+.personal-info .policy li .agree3{float:right;padding-right:18px;text-align:right}
+.personal-info .policy li .agree3 span{display:inline-block;width:130px;text-align:left}
+.personal-info .policy li .personal-info-cont{overflow-y:scroll;scrollbar-3dlight-color:#fff;scrollbar-arrow-color:#ccc;scrollbar-base-color:#fff;scrollbar-track-color:#fff;scrollbar-darkshadow-color:#fff;scrollbar-face-color:#fff;scrollbar-highlight-color:#ccc;scrollbar-shadow-color:#ccc;width:731px;height:78px;padding-left:14px;background:#F7F7F7}
+.personal-info .policy li .personal-info-cont h3{margin-top:8px;font-weight:bold;color:#F85A0F;text-align:center}
+.personal-info .policy li .personal-info-cont h4{margin-top:20px;font-weight:bold;color:#F85A0F}
+.personal-info .policy li .personal-info-cont h5{margin-top:20px}
+.personal-info .policy li .personal-info-cont ul{margin-top:20px}
+.personal-info .policy li .personal-info-cont ul li{margin-top:10px;padding-left:10px;text-indent:-10px}
+.personal-info .policy li .personal-info-cont ul li p{margin-top:5px;padding-left:15px}
+.personal-info .policy li .personal-info-cont p{margin-top:20px}
+.personal-info .policy li.no1{padding:20px 0 10px 64px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/icon_no1.gif) no-repeat 18px 50%}
+.personal-info .policy li.no1 p a{color:#666}
+.personal-info .policy li.no1 .link{margin-top:20px}
+.personal-info .policy li.no1 .link a{margin-right:88px;padding-right:9px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/bl_arrow.gif) no-repeat right 2px;font-weight:bold;color:#006CC9;letter-spacing:-1px}
+.personal-info .policy li.no2{padding:11px 0 11px 64px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/icon_no2.gif) no-repeat 18px 50%}
+.personal-info .policy li.no3{padding:22px 0 21px 64px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/icon_no3.gif) no-repeat 18px 50%}
+.personal-info .policy li.no4{padding:22px 0 21px 64px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/icon_no4.gif) no-repeat 18px 50%}
+.personal-info .policy li.no3 p,
+.personal-info .policy li.no4 p{float:left}
+.personal-info .policy li ul li{margin:0;padding:0;border:none}
+.personal-info .personal-info-txt{margin-top:21px;font-size:11px;text-align:center;color:#000}
+.personal-info .personal-info-txt strong{font-weight:bold}
+.personal-info .btn-center{margin-top:16px;text-align:center}
+
+.prohibit-minors{clear:both;overflow:hidden;width:100%}
+.prohibit-minors div{width:722px;margin:30px auto 0;padding:21px 0 6px 100px;background:#ffe2e2 url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/bg_19.gif) no-repeat 31px 22px;color:#555;line-height:18px}
+.prohibit-minors div p{padding-bottom:10px}
+.prohibit-minors div strong{font-weight:bold}
+
+.statusbox{margin-top:10px;height:1px;background:#2986df;border:1px solid #0e6ad3;text-align:center}
+.statusbox.logout>img{margin:2px 0 0 -1px;padding:8px 164px 12px 163px;background:#ececec;vertical-align:middle}
+.statusbox.logout+.location{margin-top:37px}
+
+/* 성인인증 */
+.auth_cont{width:900px;margin:40px auto 50px}
+.auth_cont h2{height:32px;padding:13px 0 0 10px;border-bottom:1px solid #ebebeb}
+.auth_wrap{width:696px;margin:20px auto 50px}
+.auth_wrap .auth_wrap_in{border:2px solid #dcdcdc;background-color:#fafafa}
+.auth_cont .member-select{margin-bottom:12px}
+.auth_cont .member-select label{margin-right:50px}
+.auth_wrap p.txt{border-bottom:1px dashed #c6c6c6;text-align:center;padding:14px 0 13px}
+.auth_wrap ul.auth_type{width:480px;margin:0 auto;padding:38px 0 28px;overflow:hidden;_zoom:1}
+.auth_wrap ul.auth_type.list1{width:160px;margin:0 auto}
+.auth_wrap ul.auth_type.list2{width:320px;margin:0 auto}
+.auth_wrap ul.auth_type li{width:160px;padding:5px 0;float:left;text-align:center}
+.auth_wrap ul.auth_type strong{display:block;height:28px;font-weight:bold;letter-spacing:-1px;margin:10px 0;line-height:15px}
+.auth_wrap ul.auth_type strong span{font-weight:normal}
+.auth_wrap ul.auth_type .authentication_bg{display:inline-block;width:67px;height:54px;background:url(//pics.gmkt.kr/pc/ko/member/login/sprite_certify.png) no-repeat}
+.auth_wrap ul.auth_type .ic_mobie{background-position:0 0}
+.auth_wrap ul.auth_type .ic_card{background-position:-72px 0}
+.auth_wrap ul.auth_type .ic_ipin{background-position:-144px 0}
+.auth_wrap .auth_form{width:340px;margin:0 auto;padding:25px 4px 20px}
+.auth_wrap .auth_form p{margin-bottom:8px;padding-left:7px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/bl_dot2.gif) no-repeat 0 50%;line-height:14px}
+.auth_wrap .auth_form p *{vertical-align:middle}
+.auth_wrap .auth_form label{display:inline-block;width:100px;margin-top:2px;font-weight:bold;color:#444}
+.auth_wrap .auth_form p input{border:1px solid #c5c5c5;padding:3px 5px}
+.auth_wrap .auth_form p input.inputName{width:194px}
+.auth_wrap .auth_form p input.inputForeign{width:84px}
+.auth_wrap .auth_form .btn{margin-left:107px;padding-top:10px}
+.auth_wrap ul.txt_list{border-top:1px solid #e7e7e7;background-color:#fff;padding:20px 22px 12px}
+.auth_wrap ul.txt_list li{padding:0 0 3px 9px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_image/login_img/201112/bl_dot.gif) no-repeat 0 3px;color:#999;font-size:11px}
+
+/* WPR-295 휴대폰 도용방지 서비스 안내 레이어 */
+.mobile_theft{position:absolute;z-index:222;width:374px;background:#fff;border:3px solid #1179ea}
+.mobile_theft .layer_head{padding-left:19px;height:45px;line-height:43px;background:url(//pics.gmkt.kr/pc/ko/net/core/common/g_layer.png) repeat-x 0 -50px}
+.mobile_theft .layer_head strong span{overflow:hidden;display:block;background:url(//pics.gmkt.kr/pc/ko/net/core/member/login/title_mobile_theft.png) no-repeat 0 12px;text-indent:-999em}
+.mobile_theft .layer_body{overflow:auto;overflow-x:hidden;max-height:412px;min-height:100px;padding:15px 15px 0px 15px}
+.mobile_theft .layer_body strong.txt_blue{display:block;color:#3371c9;text-align:center;letter-spacing:-1px}
+.mobile_theft .layer_body div ul{padding:20px 0 15px 100px;background:url(//pics.gmkt.kr/pc/ko/net/core/member/login/img_phone.png) no-repeat 34px 10px}
+.mobile_theft .layer_body div ul li{padding-left:10px;background:url(//pics.gmkt.kr/pc/ko/net/core/member/login/icon_arrow.png) no-repeat 1px 5px;color:#444;font-weight:bold;line-height: 18px;letter-spacing: -1px}
+.mobile_theft .layer_body .box_gray{padding:12px;background:#f7f7f7;border:1px solid #DEDEDE;color:#777;font-size:11px;line-height:18px;letter-spacing:-1px}
+.mobile_theft .layer_body .layer_button_set{padding:17px 0 15px;text-align: center}
+.mobile_theft .layer_body a.layer_button{display:inline-block;padding-right:1px;width:150px;height:31px;background:url(//pics.gmkt.kr/pc/ko/net/core/common/g_layer_button.png) no-repeat 100% 0;line-height:31px;text-align:center;text-decoration:none;cursor:pointer}
+.mobile_theft .layer_body a.layer_button span{display:block;zoom:1;height:31px;background:url(//pics.gmkt.kr/pc/ko/net/core/common/g_layer_button.png) no-repeat;color:#fff;font-size:12px;letter-spacing:0;text-decoration:none;white-space:nowrap;cursor:pointer}
+.mobile_theft a.layer_close{overflow:hidden;display:block;position:absolute;top:0;right:0;width:20px;height:20px;padding:12px;background:url(//pics.gmkt.kr/pc/ko/net/core/common/g_layer.png) no-repeat -50px -100px;text-indent:-999em}
+
+/* 보안 지킴이 관련 css */
+body.gmkSecurity img{vertical-align: top}
+body.gmkSecurity{background-color:#f6f6f6;font-size:12px;line-height:16px;color:#444;font-family:dotum,dotumche sans-serif}
+body.gmkSecurity .securityBox{width:707px;margin:140px auto;padding:0;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_member/self_verification/2013_04_img/bgBoxMid.gif) repeat-y 0 0}
+body.gmkSecurity .securityBox .boxTop{padding:0;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_member/self_verification/2013_04_img/bgBoxTop.gif) no-repeat 0 0}
+body.gmkSecurity .securityBox .boxBtm{padding:10px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_member/self_verification/2013_04_img/bgBoxBtm.gif) no-repeat 0 100%}
+body.gmkSecurity #selfVerification{padding:30px 68px}
+body.gmkSecurity #selfVerification em.b{color:#2368c5;font-style:normal}
+body.gmkSecurity #selfVerification h2{margin:0;padding:20px 0;font-size:18px;text-align:center}
+body.gmkSecurity #selfVerification h2 img{vertical-align:top}
+body.gmkSecurity #selfVerification h3{margin:0;padding:12px 0 8px;*padding-top:10px;font-size:16px;line-height:18px;letter-spacing:-1px;font-weight:bold;border-top:1px solid #777;border-bottom:1px solid #777}
+body.gmkSecurity #selfVerification h3 em{font-weight:bold}
+body.gmkSecurity #selfVerification ul.bulTxt{list-style:none;margin:15px 0 0;padding:0;color:#777}
+body.gmkSecurity #selfVerification ul.bulTxt li{margin:0;padding:3px 0 2px 9px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_member/self_verification/2013_04_img/bulArr.gif) no-repeat 0 7px}
+body.gmkSecurity #selfVerification ul.bulTxt2{list-style:none;height:35px;margin:13px 0 0;padding:7px 0 0;border-top:1px solid #dedede;font-size:11px;color:#777}
+body.gmkSecurity #selfVerification ul.bulTxt2 li{margin:0;padding:0 0 0 8px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_member/self_verification/2013_04_img/bulDot.gif) no-repeat 0 5px}
+body.gmkSecurity #selfVerification .form{border:0;margin:15px 0 0;padding:0}
+body.gmkSecurity #selfVerification .form legend{display:none;height:0}
+body.gmkSecurity #selfVerification .form h4{margin:23px 0 0;padding:0;font-size:12px;font-weight:bold}
+body.gmkSecurity #selfVerification .form .box{margin:0;padding:15px 21px;background-color:#f7f7f7;border:1px solid #dedede;text-align:center;line-height:13px}
+body.gmkSecurity #selfVerification .form label{font-weight:bold;*margin-right:20px}
+body.gmkSecurity #selfVerification .form label + .box{margin-top:10px}
+body.gmkSecurity #selfVerification .form .box label{line-height:24px}
+body.gmkSecurity #selfVerification .form .box input.input_txt{width:189px;height:16px;margin-left:10px;padding:2px 0}
+body.gmkSecurity #selfVerification .form ul.box{list-style:none}
+body.gmkSecurity #selfVerification .form ul.box li{display:inline-block;*display:inline;width:30%;*text-align:center;margin:0;padding:0}
+body.gmkSecurity #selfVerification .form ul.box li label{vertical-align:-2px}
+body.gmkSecurity #selfVerification .form ul.box li .chk{margin-left:20px}
+body.gmkSecurity #selfVerification .form ul.box2{list-style:none;margin:5px 0 0;padding:15px 21px;background-color:#f7f7f7;line-height:13px;border:1px solid #dedede}
+body.gmkSecurity #selfVerification .form ul.box2 li{margin:0;padding:2px 0 3px;overflow:hidden;*zoom:1}
+body.gmkSecurity #selfVerification .form ul.box2 li label{float:left;width:33%;padding:6px 0 0 9px;font-weight:normal}
+body.gmkSecurity #selfVerification .form ul.box2 li input{float:left;width:35%;padding:3px 5px;border:1px solid #cecece}
+body.gmkSecurity #selfVerification .form .chk{margin-right:7px;vertical-align:middle}
+body.gmkSecurity #selfVerification .form p.txt{margin:10px 0 0;padding:0;font-size:11px;color:#777}
+body.gmkSecurity #selfVerification .form p.txt *{vertical-align:middle}
+body.gmkSecurity #selfVerification .form p.txt input{margin-top:-1px}
+body.gmkSecurity #selfVerification .btnArea{margin:25px 0 0;text-align:center}
+body.gmkSecurity #selfVerification .btnArea img{vertical-align:top}
+body.gmkSecurity #selfVerification .btnArea .layer_button{display:inline-block;padding-right:1px;width:112px;height:31px;background:url(//pics.gmkt.kr/pc/ko/net/core/common/g_layer_button.png) no-repeat 100% 0;line-height:31px;text-align:center;text-decoration:none;color:#fff;cursor:pointer}
+
+/* 보안지킴이_비번변경 */
+body.gmkSecurity #selfVerificationModify{padding:30px 68px}
+body.gmkSecurity #selfVerificationModify em.b{color:#2368c5;font-style:normal}
+body.gmkSecurity #selfVerificationModify h2{margin:0;padding:20px 0;font-size:18px;text-align:center}
+body.gmkSecurity #selfVerificationModify h2 img{vertical-align:top}
+body.gmkSecurity #selfVerificationModify h3{margin:0;padding:12px 0 8px;*padding-top:10px;font-size:16px;line-height:18px;letter-spacing:-1px;font-weight:bold;border-top:1px solid #777;border-bottom:1px solid #777}
+body.gmkSecurity #selfVerificationModify h3 em{font-weight:bold}
+body.gmkSecurity #selfVerificationModify p.txt{margin:18px 10px 0 0;padding:0;line-height:20px}
+body.gmkSecurity #selfVerificationModify p.bulTxt{margin:23px 0 0;padding:0 0 0 9px;font-size:11px;background:url(//pics.gmkt.kr/pc/ko/expire/challenge/neo_member/self_verification/2013_04_img/bulArr.gif) no-repeat 0 4px;color:#777}
+body.gmkSecurity #selfVerificationModify h4{margin:23px 0 0;padding:0;font-size:12px;font-weight:bold}
+body.gmkSecurity #selfVerificationModify .form{border:0;margin:0;padding:0}
+body.gmkSecurity #selfVerificationModify .form legend{display:none;height:0}
+body.gmkSecurity #selfVerificationModify .form .box{list-style:none;margin:5px 0 0;padding:15px 21px;background-color:#f7f7f7;line-height:13px;border:1px solid #dedede}
+body.gmkSecurity #selfVerificationModify .form li{margin:0;padding:2px 0 3px;overflow:hidden;*zoom:1}
+body.gmkSecurity #selfVerificationModify .form li label{float:left;width:33%;padding:6px 0 0 9px}
+body.gmkSecurity #selfVerificationModify .form li input{float:left;width:35%;padding:3px 5px;border:1px solid #cecece}
+body.gmkSecurity #selfVerificationModify .btnArea{margin:25px 0 0;text-align:center}
+body.gmkSecurity #selfVerificationModify .btnArea img{vertical-align:top}
+
+/* 개인정보 유효성 제도 */
+#contents.vitalization{margin:0;padding:0;width:auto;}
+#container.id_vitalization{background-color:#F6F6F6;padding:197px 0;margin-bottom:-20px;width:auto !important}
+.id_vitalization .personaldata{margin:0 auto;width:705px;height:344px;background: url(//pics.gmkt.kr/pc/ko/about/personaldata/bg_personaldata.png) no-repeat 0 0}
+.id_vitalization .personaldata .box_wrap{padding:56px 77px 0}
+.id_vitalization .personaldata .box_wrap p{margin:0;padding:0}
+.id_vitalization .personaldata .box_wrap .title_txt strong{overflow:hidden;display:block;margin:0 auto;width:117px;height:20px;background: url(//pics.gmkt.kr/pc/ko/about/personaldata/title_txt01.png) no-repeat 0 0;text-indent:-9999px}
+.id_vitalization .personaldata .box_wrap .title_txt.password strong{width:155px;background-position:-130px 0}
+.id_vitalization .personaldata .box_wrap .big_txt{margin:23px 0 28px;padding:10px 0;border-top:1px solid #777;border-bottom:1px solid #777;color:#2368C5;font-size:14px;font-weight:bold;text-align:center}
+.id_vitalization .personaldata .box_wrap .txt{font-size:12px;line-height:24px;text-align:center;vertical-align:top}
+.id_vitalization .personaldata .box_wrap .txt+.txt{margin-top:20px}
+.id_vitalization .personaldata .box_wrap .txt strong{color:#2076ED}
+.id_vitalization .personaldata .box_wrap .txt .btn_blue{color:#277DF4;font-weight:bold;text-decoration:underline}
+.id_vitalization .personaldata .box_wrap .btn_area{margin-top:62px;text-align:center}
+.id_vitalization .personaldata .box_wrap .btn_area>a{display:inline-block;width:112px;height:31px;*zoom:1}
+.id_vitalization .personaldata .box_wrap .btn_area>a span{display:inline-block;overflow:hidden;text-indent:-9999px}
+.id_vitalization .personaldata .box_wrap .btn_area .btn_ok{background:url(//pics.gmkt.kr/pc/ko/about/personaldata/btn_ok.png) no-repeat 0 0}
+.id_vitalization .personaldata .box_wrap .btn_area .btn_prev{background:url(//pics.gmkt.kr/pc/ko/about/personaldata/btn_prev.png) no-repeat 0 0}
+
+.password_ch h2{margin:0;padding:0}
+.personaldata.password_ch .box_wrap .big_txt{margin:0 auto 35px;padding:8px 0}
+.id_vitalization .personaldata.password_ch .box_wrap .btn_area{margin-top:40px}
+.id_vitalization .personaldata.password_ch .box_wrap .txt input[type="checkbox"]{display:inline-block;margin:-2px 0 0;padding:0;vertical-align:middle;line-height:16px}
+.id_vitalization .personaldata.password_ch .box_wrap .txt label{display:inline-block;line-height:15px;vertical-align:middle}
+
+/* layer_type2 - 파란 라인(3px)*/
+.ly_wrap .layer_type2{position:absolute; z-index:222;width:400px;background:#fff;border:3px solid #1179ea}
+.ly_wrap .layer_type2 .layer_head{padding:7px 0 7px 19px;height:32px;background: url(//pics.gmkt.kr/pc/ko/common/g_layer.png) repeat-x 0 -50px;line-height:32px}
+.ly_wrap .layer_type2 .layer_head strong{height:19px;color:#006bdf;font-family:dotum,"돋움",-apple-system,BlinkMacSystemFont,sans-serif;font-size:18px;font-weight:bold}
+.ly_wrap .layer_type2 .layer_body{overflow:auto;overflow-x:hidden;max-height:412px;min-height:100px;padding-top:15px}
+.ly_wrap .layer_type2 .layer_body strong.txt_blue{display:block;color:#3371c9;text-align:center;letter-spacing:-1px}
+.ly_wrap .layer_type2 .layer_body ul.list_icon  li{padding-left:10px;background:url(//pics.gmkt.kr/pc/ko/net/core/member/login/icon_arrow.png) no-repeat 1px 5px;color:#777;line-height: 18px;letter-spacing: -1px}
+.ly_wrap .layer_type2 .layer_body .layer_button_set{padding:17px 0 15px;text-align: center}
+.ly_wrap .layer_type2 .layer_body a.layer_button{display:inline-block;padding-right:1px;width:110px;height:31px;background:url(//pics.gmkt.kr/pc/ko/net/core/common/g_layer_button.png) no-repeat 100% 0;line-height:31px;text-align:center;text-decoration:none;cursor:pointer}
+.ly_wrap .layer_type2 .layer_body a.layer_button span{display:block;zoom:1;height:31px;background:url(//pics.gmkt.kr/pc/ko/net/core/common/g_layer_button.png) no-repeat;color:#fff;font-size:12px;letter-spacing:0;text-decoration:none;white-space:nowrap;cursor:pointer}
+.ly_wrap .layer_type2 a.layer_close{overflow:hidden;display:block;position:absolute;top:0;right:0;width:20px;height:20px;padding:12px;background:url(//pics.gmkt.kr/pc/ko/net/core/common/g_layer.png) no-repeat -50px -100px;text-indent:-999em}
+.ly_wrap .layer_type2.order_password{width:410px}
+.ly_wrap .layer_type2.order_password .from{padding: 0 30px}
+.ly_wrap .layer_type2.order_password .from input[type=text],
+.ly_wrap .layer_type2.order_password .from input[type=password]{height:22px;padding:2px 7px;border:1px solid #ccc;color:#777;line-height:22px;vertical-align:middle}
+.ly_wrap .layer_type2.order_password .from input[type=radio]{width:13px;height:13px;margin-right:3px;vertical-align:-3px;*vertical-align:2px}
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1{margin-bottom:12px}
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1 dt{float:left;margin-top:6px;}
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1 dt,
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1 dt label{color:#666;font-size:14px;}
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1 dd{margin-left:108px}
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1 dd label{display: inline-block;width:80px;line-height:24px;vertical-align: middle;*zoom:1}
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1 dd .dash{color:#ccc}
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1 dd.noti{position:relative;top:0;left:0;*z-index:2}
+.ly_wrap .layer_type2.order_password .from dl.dl_sty1 dd.noti .placeholder{position:absolute;left:7px;top:8px;color:#999;font-size:11px;letter-spacing:-1px;*top:10px}
+.ly_wrap .layer_type2.order_password ul.list_icon{padding:17px 20px 0; border-top:1px solid #eaeaea}
+
+/* captcha */
+.login-cont .login-input .captcha_input{position:absolute;top:86px;left:38px;width:303px;padding-left:64px}
+.login-cont .login-input .captcha_input label{position:absolute;top:7px;left:0}
+.login-cont .login-input .captcha_input .captcha_area{border:1px solid #d2d2d2}
+.login-cont .login-input .captcha_input .captcha_info{position:relative;height:38px;border-bottom:1px solid #d2d2d2}
+.login-cont .login-input .captcha_input .captcha_info img{display:block;width:207px;height:38px}
+.login-cont .login-input .captcha_input .captcha_info button{position:absolute;top:0;width:46px;height:38px;background:none;border-left:1px solid #d2d2d2}
+.login-cont .login-input .captcha_input .captcha_info .btn_sound{left:207px}
+.login-cont .login-input .captcha_input .captcha_info .btn_re{left:254px}
+.login-cont .login-input .captcha_input .captcha_info .ico{overflow:hidden;display:block;width:18px;height:18px;margin:0 auto;text-indent:-999em}
+.login-cont .login-input .captcha_input .captcha_info .btn_sound .ico{background:url(//pics.gmkt.kr/pc/ko/member/login/ico_souds.png) no-repeat}
+.login-cont .login-input .captcha_input .captcha_info .btn_re .ico{background:url(//pics.gmkt.kr/pc/ko/member/login/ico_repeat.png) no-repeat}
+.login-cont .login-input .captcha_input .input{padding:0 12px}
+.login-cont .login-input .captcha_input .input input{width:100%;height:35px;border:0;font-size:14px}
+.login-cont .login-input .captcha_input .input input::placeholder{color:#bbb}
