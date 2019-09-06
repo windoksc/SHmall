@@ -55,22 +55,20 @@ public class HomeController {
 	@RequestMapping(value = "login", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public int login(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
-		int a = 0;
+		int a ;
 		HashMap<String,Object> map = new HashMap<String, Object>();
 		map.put("id",request.getParameter("id"));
 		map.put("password",request.getParameter("pwd"));
 		s.login(map);
-		System.out.println(s.login(map).get(0).get("member_id"));
-		System.out.println(s.login(map).get(0).get("password"));
-		if (s.login(map).size()==0) {
+	System.out.println(s.login(map).size() );
+		if (s.login(map).get(0).get("member_id")==null) {
 			a = 1;
 			httpSession.setAttribute("login", null);
 		} else {
-			System.out.println(s.login(map).get(0));
+			a=0;
 			httpSession.setAttribute("id",s.login(map).get(0).get("member_id"));
 			httpSession.setAttribute("password", s.login(map).get(0).get("password"));
 		}
-		System.out.println(a);
 		return a;
 	}
 	
