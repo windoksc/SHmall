@@ -1,5 +1,5 @@
 @charset "UTF-8";
-	.ab,.check-all {
+.ab,.check-all {
     position: absolute;
     top: 50%;
     right: 1px;
@@ -13,3 +13,10 @@
     -moz-appearance: none;
     appearance: none;
 }
+<<<<<<< HEAD
+=======
+
+#header{}
+#contents{}
+#footer{}
+>>>>>>> branch 'master' of https://github.com/windoksc/SHmall
