@@ -44,6 +44,7 @@ public class HomeController {
 		
 		return "home";
 	}
+	
 	@RequestMapping(value = "sigin", method = { RequestMethod.GET, RequestMethod.POST })
 	public String sigin(Locale locale, Model model) {
 		
@@ -55,6 +56,13 @@ public class HomeController {
 		
 		return "main";
 	}
+	
+	@RequestMapping(value = "addProduct", method = { RequestMethod.GET, RequestMethod.POST })
+	public String addProduct(Locale locale, Model model) {
+		
+		return "addProduct";
+	}
+	
 	@RequestMapping(value = "login", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public int login(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
@@ -73,6 +81,7 @@ public class HomeController {
 		}
 		return a;
 	}
+	
 	@RequestMapping(value = "logout", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public void logout(HttpSession httpSession) throws Exception {
