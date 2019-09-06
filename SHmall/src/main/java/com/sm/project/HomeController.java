@@ -77,7 +77,7 @@ public class HomeController {
 
 		return "main";
 	}	
-	
+
 	@RequestMapping(value = "logout", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public String logout(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
@@ -120,9 +120,17 @@ public class HomeController {
 		map.put("email",request.getParameter("firstemail")+"@"+request.getParameter("secendemail"));
 		map.put("password",request.getParameter("memberPwd"));
 		map.put("name",request.getParameter("memberName"));
+
 		map.put("phone",request.getParameter("memberNickname"));
 		map.put("date",time2);
 		s.singup(map);
+
+		map.put("nickname",request.getParameter("memberNickname"));
+		System.out.println("�Է�");
+		System.out.println(request.getParameter("memberPwd"));
+//		s.singup(map);
+
+
 		return 0;
 	}
 	
