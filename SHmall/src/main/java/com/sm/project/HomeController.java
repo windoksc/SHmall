@@ -47,25 +47,11 @@ public class HomeController {
 		
 		return "home";
 	}
-	
 	@RequestMapping(value = "sigin", method = { RequestMethod.GET, RequestMethod.POST })
 	public String sigin(Locale locale, Model model) {
 		
 		return "sigin";
 	}
-	
-	@RequestMapping(value = "main", method = { RequestMethod.GET, RequestMethod.POST })
-	public String main(Locale locale, Model model) {
-		
-		return "main";
-	}
-	
-	@RequestMapping(value = "addProduct", method = { RequestMethod.GET, RequestMethod.POST })
-	public String addProduct(Locale locale, Model model) {
-		
-		return "addProduct";
-	}
-	
 	@RequestMapping(value = "login", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public int login(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
@@ -74,24 +60,33 @@ public class HomeController {
 		map.put("id",request.getParameter("id"));
 		map.put("password",request.getParameter("pwd"));
 		s.login(map);
-		System.out.println(	s.login(map));
-		if (s.login(map) == null) {
+		System.out.println(s.login(map).get(0).get("member_id"));
+		System.out.println(s.login(map).get(0).get("password"));
+		if (s.login(map).size()==0) {
 			a = 1;
 			httpSession.setAttribute("login", null);
 		} else {
-			httpSession.setAttribute("id", s.login(map).get(0));
-			httpSession.setAttribute("password", s.login(map).get(1));
+			System.out.println(s.login(map).get(0));
+			httpSession.setAttribute("id",s.login(map).get(0).get("member_id"));
+			httpSession.setAttribute("password", s.login(map).get(0).get("password"));
 		}
+		System.out.println(a);
 		return a;
 	}
 	
-<<<<<<< HEAD
+	@RequestMapping(value = "main", method = { RequestMethod.GET, RequestMethod.POST })
+	public String main(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+
+		return "main";
+	}	
+	
 	@RequestMapping(value = "logout", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public String logout(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		httpSession.invalidate();
-		return "home";
+		return "main";
 	}	
+	
 	@RequestMapping(value = "cart", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public int cart(Session session,HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
@@ -99,10 +94,12 @@ public class HomeController {
 		HashMap<String,Object> map = new HashMap<String, Object>();
 		if(!httpSession.getAttribute("id").equals(null)) {
 			map.put("id",httpSession.getAttribute("id"));
-			
+			map.put("productName",	request.getParameter("productName"));
+			map.put("productName",	request.getParameter("price"));
 		} else {
 			map.put("id",httpSession.getId());
-		
+			map.put("productName",	request.getParameter("productName"));
+			map.put("productName",	request.getParameter("price"));
 		}
 		
 		return a;
@@ -113,13 +110,6 @@ public class HomeController {
 		
 		return "login";
 	}
-
-	@RequestMapping(value = "logout", method = { RequestMethod.GET, RequestMethod.POST })
-	@ResponseBody
-	public void logout(HttpSession httpSession) throws Exception {
-		httpSession.invalidate();
-	}
-	
 	@RequestMapping(value = "siginup", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody 
 	public int singup(HttpServletRequest request, HttpServletResponse resp,Locale locale) throws Exception {
@@ -132,16 +122,9 @@ public class HomeController {
 		map.put("email",request.getParameter("firstemail")+"@"+request.getParameter("secendemail"));
 		map.put("password",request.getParameter("memberPwd"));
 		map.put("name",request.getParameter("memberName"));
-<<<<<<< HEAD
 		map.put("phone",request.getParameter("memberNickname"));
 		map.put("date",time2);
 		s.singup(map);
-=======
-		map.put("nickname",request.getParameter("memberNickname"));
-		System.out.println("�Է�");
-		System.out.println(request.getParameter("memberPwd"));
-//		s.singup(map);
->>>>>>> branch 'master' of https://github.com/windoksc/SHmall
 		return 0;
 	}
 	

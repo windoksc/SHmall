@@ -22,6 +22,7 @@
 			success : function(data) {
 				if (data == 0) {
 					alert("로그인");
+					location.href="main";
 				} else {
 					alert("정보 틀림 다시");
 					return;

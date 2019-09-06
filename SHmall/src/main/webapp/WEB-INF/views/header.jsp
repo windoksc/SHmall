@@ -20,7 +20,8 @@
 			</div>
 			<div class="statelog">
 				<ul class="xans-element- xans-layout xans-layout-statelogoff ">
-					<li class="login"><a onclick="login_layer(); return false;">Login</a></li>
+					<li class="login"><a href="logins">Login</a></li>
+					<li class="login"><a href="sigin">회원가입</a></li>
 					<li class="xans-element- xans-layout xans-layout-orderbasketcount cart "><a href="/order/basket.html">Bag</a></li>
 				</ul>
 			</div>
