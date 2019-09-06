@@ -18,8 +18,8 @@ public class Ser {
 	private SqlSession sqlSession;
 	private static final String Namespace = "com.sm.project.mapper.memberMapper";
 	
-	public int login(Map<String,Object> login) throws Exception {
-		return sqlSession.selectOne("login",login);
+	public  List<Map<String,Object>> login(Map<String,Object> login) throws Exception {
+		return sqlSession.selectList("login",login);
 	}
 	public void singup(Map<String,Object> map) throws Exception {
 		 sqlSession.insert("sigin", map);

@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.mysql.cj.Session;
+
 
 /**
  * Handles requests for the application home page.
@@ -54,21 +56,43 @@ public class HomeController {
 	@ResponseBody
 	public int login(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		int a = 0;
-		String id = request.getParameter("id");
-		String pwd = request.getParameter("pwd");
-		HashMap<String, Object> map = new HashMap<String, Object>();
-		map.put("id", id);
-		map.put("pwd", pwd);
-		System.out.println(map);
-//		s.login(map);
-//		if (s.login(map) == 0) {
-//			a = 1;
-//			httpSession.setAttribute("login", null);
-//		} else {
-//			httpSession.setAttribute("login", s.login(map));
-//		}
+		HashMap<String,Object> map = new HashMap<String, Object>();
+		map.put("id",request.getParameter("id"));
+		map.put("password",request.getParameter("pwd"));
+		s.login(map);
+		System.out.println(	s.login(map));
+		if (s.login(map) == null) {
+			a = 1;
+			httpSession.setAttribute("login", null);
+		} else {
+			httpSession.setAttribute("id", s.login(map).get(0));
+			httpSession.setAttribute("password", s.login(map).get(1));
+		}
 		return a;
 	}
+	
+	@RequestMapping(value = "logout", method = { RequestMethod.GET, RequestMethod.POST })
+	@ResponseBody
+	public String logout(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+		httpSession.invalidate();
+		return "home";
+	}	
+	@RequestMapping(value = "cart", method = { RequestMethod.GET, RequestMethod.POST })
+	@ResponseBody
+	public int cart(Session session,HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+		int a=1;
+		HashMap<String,Object> map = new HashMap<String, Object>();
+		if(!httpSession.getAttribute("id").equals(null)) {
+			map.put("id",httpSession.getAttribute("id"));
+			
+		} else {
+			map.put("id",httpSession.getId());
+		
+		}
+		
+		return a;
+	}	
+	
 	@RequestMapping(value = "logins", method = { RequestMethod.GET, RequestMethod.POST })
 	public String logins(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		

@@ -8,5 +8,13 @@
 insert into members (member_id,member_name,password,email,phone,admin,date) values (#{id},#{name},#{password},#{email},#{phone},0,#{date})
 </insert>
 
+<select id="login" resultType="int" parameterType="Map">
+select count(*) from members where member_id = #{id} and password = #{password}
+</select>
+
+<select id="logins" resultType="Map" parameterType="Map">
+select member_id,password from members where member_id = #{id} and password = #{password}
+</select>
+
 </mapper>
 	
