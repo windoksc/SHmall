@@ -76,7 +76,13 @@ public class HomeController {
 	public String main(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 
 		return "main";
-	}	
+	}
+	
+	@RequestMapping(value = "addProduct", method = { RequestMethod.GET, RequestMethod.POST })
+	public String addProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+
+		return "addProduct";
+	}
 
 	@RequestMapping(value = "logout", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
