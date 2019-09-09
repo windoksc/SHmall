@@ -8,10 +8,9 @@
 <link rel="stylesheet" type="text/css" href="../css/product.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="../script/product.js"></script>
-
+<%@ include file="header.jsp"%>
 </head>
 <body>
-	<jsp:include page="header.jsp"></jsp:include>
 	<h2></h2>
 	<form id="productForm" action="">
 		<table id="addProductTable">
@@ -33,7 +32,7 @@
 			</tr>
 			<tr>
 				<td colspan="2">
-					<input type="button" value="등록" id="addProduct">
+					<input type="button" value="상품등록" id="addProduct">
 					<input type="button" value="취소" id="cancelProduct">
 				</td>
 			</tr>

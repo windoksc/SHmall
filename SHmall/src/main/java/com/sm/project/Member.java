@@ -8,13 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Ser {
+public class Member {
 	
 	@Autowired
 	private SqlSession sqlSession;
 	private static final String Namespace = "com.sm.project.mapper.memberMapper";
 	
-	public  List<Map<String,Object>> login(Map<String,Object> login) throws Exception {
+	public List<Map<String,Object>> login(Map<String,Object> login) throws Exception {
 		return sqlSession.selectList("login",login);
 	}
 	public void singup(Map<String,Object> map) throws Exception {

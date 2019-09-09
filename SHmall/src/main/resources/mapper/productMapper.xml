@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.sm.project.mapper.productMapper">
+	<insert id="addProduct" parameterType="Map">
+		insert into products values (0,#{productName},#{thumbnail},#{contents},#{price})
+	</insert>
+
+	<select id="getListProducts" resultType="Map" parameterType="Map">
+		select * from products order by product_id desc
+	</select>
+	
+	<select id="getOneProduct" resultType="Map" parameterType="Map">
+		select * from products where product_id=${productId}
+	</select>
+</mapper>

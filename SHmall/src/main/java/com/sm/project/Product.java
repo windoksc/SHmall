@@ -1,0 +1,26 @@
+package com.sm.project;
+
+import java.util.List;
+import java.util.Map;
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class Product {
+	@Autowired
+	private SqlSession sqlSession;
+	private static final String Namespace = "com.sm.project.mapper.productMapper";
+	
+	public void addProduct(Map<String,Object> product) throws Exception {
+		sqlSession.insert("addProduct", product);
+	}
+	
+	public List<Map<String,Object>> getListProducts() throws Exception {
+		 return sqlSession.selectList("getListProducts");
+	}
+	
+	public Map<String,Object> getOneProduct(int productId) throws Exception {
+		 return sqlSession.selectOne("getOneProduct", productId);
+	}
+}
