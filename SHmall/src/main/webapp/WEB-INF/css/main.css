@@ -13,10 +13,12 @@
     -moz-appearance: none;
     appearance: none;
 }
-<<<<<<< HEAD
-=======
 
-#header{}
 #contents{}
-#footer{}
->>>>>>> branch 'master' of https://github.com/windoksc/SHmall
+
+#top{}
+
+#mid{}
+
+#bot{}
+

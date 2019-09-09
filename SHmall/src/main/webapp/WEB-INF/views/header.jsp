@@ -7,32 +7,28 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
-
+<link rel="stylesheet" type="text/css" href="../css/header.css">
 </head>
 <body>
-	<div id="header">
-		<div class="cover">
-			
-			<div class="category">
-				<ul class="cate0">
-					<li><a href="">HOME</a></li>
-					<li><a href="">TOP</a></li>
-					<li><a href="">PANTS</a></li>
-					
-				</ul>
-			</div>
-			<div class="statelog">
-				<ul class="xans-element- xans-layout xans-layout-statelogoff ">
-					<c:if test="${empty login }">
-						<li class="login"><a href="logins">Login</a></li>
-					</c:if>
-					<c:if test="${!empty login }">
-						<li class="login"><a href="logout">Logout</a></li>
-					</c:if>
-					<li class="sign"><a href="sigin">회원가입</a></li>
-					<li class="bag"><a href="">장바구니</a></li>
-				</ul>
-			</div>
+	<div class="cover">
+		<div class="category">
+			<ul class="menu">
+				<li><a href="./main">HOME</a></li>
+				<li><a href="">TOP</a></li>
+				<li><a href="">PANTS</a></li>
+			</ul>
+		</div>
+		<div class="category">
+			<ul class="menu">
+				<c:if test="${empty login }">
+					<li class="login"><a href="logins">Login</a></li>
+				</c:if>
+				<c:if test="${!empty login }">
+					<li class="login"><a href="logout">Logout</a></li>
+				</c:if>
+				<li class="sign"><a href="sigin">회원가입</a></li>
+				<li class="bag"><a href="">장바구니</a></li>
+			</ul>
 		</div>
 	</div>
 </body>

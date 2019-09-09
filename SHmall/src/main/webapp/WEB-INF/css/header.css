@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* 전체적용 */
+.cover{height:50px;}
+
+/* 기본메뉴 */
+.category{width:500px; float:left;}
+.menu{list-style-type:none;}
+.menu li{width:100px; float:left;}
+

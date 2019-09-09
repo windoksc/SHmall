@@ -279,7 +279,8 @@ $( document).ready( function() {
 				});
 			}
  
-		</script> 
+		</script>
+		<%@ include file="header.jsp"%>
 	</head>
 	<body>
 		<form name="frm_Info" method="post" id="danawa-member-joinStep-form-id">
