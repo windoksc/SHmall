@@ -7,28 +7,25 @@
 <title>메인 페이지</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css?1">
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
-	<hr>
 	<div id="contents">
 		<div id="top">
 			<div class="visual">
-				<div class="flexslider carousel">
-					<ul class="slides">
-						<li><a href=""><img src="" alt="편안한 히든밴딩 치노&amp;슬랙스"/></a></li>  
-		                <li><a href=""><img src="" alt="롱앤숏 쿨라이트 슬랙스"/></a></li> 
-		                <li><a href=""><img src="" alt="클리어 프리미엄 린넨셔츠"/></a></li>  
-		                <li><a href=""><img src="" alt="데오쿨 더블넥 반팔티"/></a></li>  
-		                                        
-		                <li><a href=""><img src="" alt="맨즈 스판 슬랙셔츠"/></a></li>
-		                <li><a href=""><img src="" alt="쫀쫀 워싱 조거팬츠"/></a></li> 
-		                <li><a href=""><img src="" alt="10컬러 빅사이즈 반바지"/></a></li>
-		                
-		                <li><a href=""><img src="" alt="비침없는 베이직 반팔티"/></a></li> 
-					</ul>
-				</div>
+				<ul class="slides">
+					<li><a href=""><img src="" alt="편안한 히든밴딩 치노&amp;슬랙스"/></a></li>  
+	                <li><a href=""><img src="" alt="롱앤숏 쿨라이트 슬랙스"/></a></li> 
+	                <li><a href=""><img src="" alt="클리어 프리미엄 린넨셔츠"/></a></li>  
+	                <li><a href=""><img src="" alt="데오쿨 더블넥 반팔티"/></a></li>  
+	                                        
+	                <li><a href=""><img src="" alt="맨즈 스판 슬랙셔츠"/></a></li>
+	                <li><a href=""><img src="" alt="쫀쫀 워싱 조거팬츠"/></a></li> 
+	                <li><a href=""><img src="" alt="10컬러 빅사이즈 반바지"/></a></li>
+	                
+	                <li><a href=""><img src="" alt="비침없는 베이직 반팔티"/></a></li> 
+				</ul>
 			</div>
 		</div>
 		<div id="mid">

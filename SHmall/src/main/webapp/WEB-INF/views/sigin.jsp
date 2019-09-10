@@ -8,11 +8,13 @@
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <head>
-		<title> 회원가입</title>
+	<title> 회원가입</title>
+	<%@ include file="header.jsp"%>
 	<link rel="shortcut icon" href="//img.danawa.com/new/danawa_main/v1/img/danawa_favicon.ico" />
 	<script type="text/javascript" src="/resources/js/util/envUtils.js?v=10"></script>
+		<link href="../css/main.css" rel="stylesheet" />
 		<link href="//static.danawa.com/new/recss/member_new.css?v=10" rel="stylesheet" type="text/css" />
-		<link href="../css/main.css" rel="stylesheet" /> 
+		 
 <!-- 		<script type="text/javascript" src="/resources/js/jquery-1.11.3.min.js"></script> -->
 <!-- 		<script type="text/javascript" src="/resources/js/library/underscore-1.8.3.min.js"></script> -->
 <!-- 		<script type="text/javascript" src="/resources/js/util/envUtils.js"></script> -->
@@ -280,7 +282,7 @@ $( document).ready( function() {
 			}
  
 		</script>
-		<%@ include file="header.jsp"%>
+		
 	</head>
 	<body>
 		<form name="frm_Info" method="post" id="danawa-member-joinStep-form-id">

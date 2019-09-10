@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 상세 페이지</title>
-<%@ include file="header.jsp"%>
+<%@ include file="../header.jsp"%>
 </head>
 <body>
 	<h2>상품 상세정보</h2>

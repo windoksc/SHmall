@@ -1,7 +1,16 @@
 @charset "UTF-8";
 
 /* 전체적용 */
-.cover{height:50px;}
+body, input, button, select, input, txtArea, 
+h1, h2, h3, h4, h5, h6, 
+img, dl, dt, dd, ul, ol, li, 
+legend, hr, em, addres, div, p, strong, 
+fieldset, form{margin:0;padding:0;}
+
+body, input, textarea, select, button, table{font-size:12px; font-family:"돋움",dotum,Helvetica,AppleGothic,Sans-serif;
+text-align:center; background:#fff; color:#000;}
+
+.cover{height:50px; margin-top:20px; position:fixed;}
 
 /* 기본메뉴 */
 .category{width:500px; float:left;}
