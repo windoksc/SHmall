@@ -1,5 +1,6 @@
 package com.sm.project;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import org.apache.ibatis.session.SqlSession;
@@ -16,11 +17,15 @@ public class Product {
 		sqlSession.insert("addProduct", product);
 	}
 	
+	public void editProduct(Map<String,Object> product) throws Exception {
+		sqlSession.update("editProduct", product);
+	}
+	
 	public List<Map<String,Object>> getListProducts() throws Exception {
 		 return sqlSession.selectList("getListProducts");
 	}
 	
-	public Map<String,Object> getOneProduct(int productId) throws Exception {
+	public HashMap<String,Object> getOneProduct(int productId) throws Exception {
 		 return sqlSession.selectOne("getOneProduct", productId);
 	}
 }

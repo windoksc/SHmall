@@ -80,8 +80,17 @@ $(function(){
 			return false;
 		}
 		
-		$("#productForm").attr("action","editProductAction");
-		$("#productForm").submit();
+		$.ajax({
+			type:"post",
+			url:"editProductAction",
+			data:formData,
+			dataType:"text",
+			processData:false,
+			contentType:false,
+			success:function(data){
+				alert(data);
+			}
+		});
 	});
 	
 	// 삭제버튼

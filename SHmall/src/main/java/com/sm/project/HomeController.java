@@ -155,6 +155,7 @@ public class HomeController {
 	@RequestMapping(value = "listProduct", method = { RequestMethod.GET, RequestMethod.POST })
 	public String listProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		
+		request.setAttribute("list", product.getListProducts());
 		return "/product/listProduct";
 	}
 	
@@ -162,6 +163,12 @@ public class HomeController {
 	@RequestMapping(value = "editProduct", method = { RequestMethod.GET, RequestMethod.POST })
 	public String editProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		
+		String pId = (String)request.getAttribute("productId");
+		
+		HashMap<String,Object> map = new HashMap<String, Object>();
+		map = product.getOneProduct(Integer.parseInt(pId));
+		
+		request.setAttribute("product", map);
 		return "/product/editProduct";
 	}
 		
@@ -169,6 +176,12 @@ public class HomeController {
 	@RequestMapping(value = "viewProduct", method = { RequestMethod.GET, RequestMethod.POST })
 	public String viewProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		
+		String pId = (String)request.getAttribute("productId");
+		
+		HashMap<String,Object> map = new HashMap<String, Object>();
+		map = product.getOneProduct(Integer.parseInt(pId));
+		
+		request.setAttribute("product", map);
 		return "/product/viewProduct";
 	}
 
@@ -181,6 +194,25 @@ public class HomeController {
 		map.put("price",request.getParameter("price"));
 		map.put("thumbnail",request.getParameter("thumbnail"));
 		map.put("contents",request.getParameter("contents"));
+		
 		product.addProduct(map);
+		
+		request.getRequestDispatcher("listProduct").forward(request, resp);
+	}
+	
+	// 품목 수정 action
+	@RequestMapping(value = "addProductAction", method = { RequestMethod.GET, RequestMethod.POST })
+	public void editProductAction(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+		HashMap<String,Object> map = new HashMap<String, Object>();
+		
+		map.put("productId",request.getParameter("productId"));
+		map.put("productName",request.getParameter("productName"));
+		map.put("price",request.getParameter("price"));
+		map.put("thumbnail",request.getParameter("thumbnail"));
+		map.put("contents",request.getParameter("contents"));
+		
+		product.editProduct(map);
+		
+		request.getRequestDispatcher("listProduct").forward(request, resp);
 	}
 }

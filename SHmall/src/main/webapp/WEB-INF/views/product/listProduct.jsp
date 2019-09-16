@@ -26,10 +26,12 @@
 		<tr>
 			<td>${row.productNumber }</td>
 			<td>
-				<a><img alt="" src=""></a>
+				<a href="viewProduct?productId=${row.productId }">
+					<img alt="thumbnail" src="${row.thumbnail }">
+				</a>
 			</td>
 			<td>
-				<a>${row.productName }</a>
+				<a href="viewProduct?productId=${row.productId }">${row.productName }</a>
 				<c:if test="${sessionScope.adminId!=null }">
 					<a href="product/editProduct">[상품편집]</a>
 				</c:if>
