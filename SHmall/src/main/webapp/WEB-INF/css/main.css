@@ -15,13 +15,14 @@
 }
 
 /* 전체 설정 */
-#contents{width:100%;height:100%; margin-top:70px;}
+#contents{width:100%;height:100%; margin-top:-1px;}
 
 /* top 이미지 설정 */
-#top{height:300px;}
+#top{}
+#top .visual{clear:both; overflow:hidden; position:relative; width:100%;max-width:1920px;height:833px;}
 #top .visual .slides{list-style-type:none;}
 #top .visual .slides li{float:left;}
-.slides img{height:300px;width:200px;}
+.slides img{height:300px;width:1920px;}
 
 /* 새로운 품목 */
 #mid{height:300px;}

@@ -7,12 +7,13 @@
 <title>상품 등록 페이지</title>
 <link rel="stylesheet" type="text/css" href="../css/product.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="../script/product.js"></script>
+<script type="text/javascript" src="../../script/product.js"></script>
 <%@ include file="../header.jsp"%>
+
 </head>
 <body>
 	<h2>상품등록</h2>
-	<form id="productForm" action="">
+	<form id="productForm" action="" enctype="multipart/form-data" method="post">
 		<table id="addProductTable">
 			<tr>
 				<td>상품명</td>

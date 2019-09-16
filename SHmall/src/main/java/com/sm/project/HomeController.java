@@ -1,5 +1,6 @@
 package com.sm.project;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -29,8 +30,13 @@ import com.mysql.cj.Session;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
 	@Autowired
-	private Member s;
+	private Member member;
+	
+	@Autowired
+	private Product product;
+	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -76,11 +82,11 @@ public class HomeController {
 		HashMap<String,Object> map = new HashMap<String, Object>();
 		map.put("id",request.getParameter("id"));
 		map.put("password",request.getParameter("pwd"));
-		s.login(map);
+		member.login(map);
 
-		if (s.login(map).get(0).get("member_id")==null) {
+		if (member.login(map).get(0).get("member_id")==null) {
 			httpSession.setAttribute("login", null);
-		} else if (s.login(map).get(0).get("admin").equals("1")) {
+		} else if (member.login(map).get(0).get("admin").equals("1")) {
 			httpSession.setAttribute("login", 2);
 		} else {
 			httpSession.setAttribute("login", 1);
@@ -104,18 +110,15 @@ public class HomeController {
 	public int cart(Session session,HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		int a=1;
 		HashMap<String,Object> map = new HashMap<String, Object>();
+		
 		if(!httpSession.getAttribute("id").equals(null)) {
 			map.put("id",httpSession.getAttribute("id"));
 			map.put("productName",	request.getParameter("productName"));
-			map.put("productName",	request.getParameter("price"));
-		} else {
-			map.put("id",httpSession.getId());
-			map.put("productName",	request.getParameter("productName"));
-			map.put("productName",	request.getParameter("price"));
+			map.put("price",	request.getParameter("price"));
 		}
 		
 		return a;
-	}	
+	}
 	
 	// 회원 가입 등록
 	@RequestMapping(value = "siginup", method = { RequestMethod.GET, RequestMethod.POST })
@@ -133,13 +136,10 @@ public class HomeController {
 
 		map.put("phone",request.getParameter("memberNickname"));
 		map.put("date",time2);
-		s.singup(map);
+		member.singup(map);
 
 		map.put("nickname",request.getParameter("memberNickname"));
-		//System.out.println("�Է�");
-		System.out.println(request.getParameter("memberPwd"));
-//		s.singup(map);
-
+		//System.out.println(request.getParameter("memberPwd"));
 
 		return 0;
 	}
@@ -147,21 +147,40 @@ public class HomeController {
 	// 품목 추가
 	@RequestMapping(value = "addProduct", method = { RequestMethod.GET, RequestMethod.POST })
 	public String addProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
-
-		return "addProduct";
+		
+		return "/product/addProduct";
 	}
 	
 	// 품목 리스트
 	@RequestMapping(value = "listProduct", method = { RequestMethod.GET, RequestMethod.POST })
 	public String listProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
-
-		return "listProduct";
+		
+		return "/product/listProduct";
 	}
 	
+	// 품목 수정 및 삭제
+	@RequestMapping(value = "editProduct", method = { RequestMethod.GET, RequestMethod.POST })
+	public String editProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+		
+		return "/product/editProduct";
+	}
+		
 	// 품목 상세
 	@RequestMapping(value = "viewProduct", method = { RequestMethod.GET, RequestMethod.POST })
 	public String viewProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+		
+		return "/product/viewProduct";
+	}
 
-		return "viewProduct";
+	// 품목 추가 action
+	@RequestMapping(value = "addProductAction", method = { RequestMethod.GET, RequestMethod.POST })
+	public void addProductAction(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+		HashMap<String,Object> map = new HashMap<String, Object>();
+		
+		map.put("productName",request.getParameter("productName"));
+		map.put("price",request.getParameter("price"));
+		map.put("thumbnail",request.getParameter("thumbnail"));
+		map.put("contents",request.getParameter("contents"));
+		product.addProduct(map);
 	}
 }

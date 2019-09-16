@@ -31,7 +31,7 @@
 			<td>
 				<a>${row.productName }</a>
 				<c:if test="${sessionScope.adminId!=null }">
-					<a>[상품편집]</a>
+					<a href="product/editProduct">[상품편집]</a>
 				</c:if>
 			</td>
 			<td>

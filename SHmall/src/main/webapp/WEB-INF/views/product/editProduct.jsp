@@ -7,12 +7,12 @@
 <title>상품 수정 및 삭제</title>
 <link rel="stylesheet" type="text/css" href="../css/product.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="../script/product.js"></script>
+<script type="text/javascript" src="../../script/product.js"></script>
 <%@ include file="../header.jsp"%>
 </head>
 <body>
 	<h2>상품 수정</h2>
-	<form id="productForm" action="">
+	<form id="productForm" action="" enctype="multipart/form-data" method="post">
 		<table id="addProductTable">
 			<tr>
 				<td>상품명</td>
