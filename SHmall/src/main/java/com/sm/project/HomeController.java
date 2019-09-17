@@ -222,13 +222,13 @@ public class HomeController {
 	}
 	
 	// 품목 수정 action
-		@RequestMapping(value = "deleteProductAction", method = { RequestMethod.GET, RequestMethod.POST })
-		public void deleteProductAction(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+	@RequestMapping(value = "deleteProductAction", method = { RequestMethod.GET, RequestMethod.POST })
+	public void deleteProductAction(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 
-			String pId = (String)request.getAttribute("productId");
+		String pId = (String)request.getAttribute("productId");
 
-			product.delProduct(Integer.parseInt(pId));
-			
-			request.getRequestDispatcher("listProduct").forward(request, resp);
-		}
+		product.delProduct(Integer.parseInt(pId));
+		
+		request.getRequestDispatcher("listProduct").forward(request, resp);
+	}
 }
