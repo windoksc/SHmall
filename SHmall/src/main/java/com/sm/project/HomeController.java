@@ -3,8 +3,10 @@ package com.sm.project;
 import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
@@ -139,7 +141,6 @@ public class HomeController {
 		member.singup(map);
 
 		map.put("nickname",request.getParameter("memberNickname"));
-		//System.out.println(request.getParameter("memberPwd"));
 
 		return 0;
 	}
@@ -155,7 +156,9 @@ public class HomeController {
 	@RequestMapping(value = "listProduct", method = { RequestMethod.GET, RequestMethod.POST })
 	public String listProduct(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		
-		request.setAttribute("list", product.getListProducts());
+		List<HashMap<String, Object>> list = product.getListProducts();
+		System.out.println(list.size());
+		request.setAttribute("list", list);
 		return "/product/listProduct";
 	}
 	
@@ -188,6 +191,7 @@ public class HomeController {
 	// 품목 추가 action
 	@RequestMapping(value = "addProductAction", method = { RequestMethod.GET, RequestMethod.POST })
 	public void addProductAction(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+		
 		HashMap<String,Object> map = new HashMap<String, Object>();
 		
 		map.put("productName",request.getParameter("productName"));
@@ -203,6 +207,7 @@ public class HomeController {
 	// 품목 수정 action
 	@RequestMapping(value = "addProductAction", method = { RequestMethod.GET, RequestMethod.POST })
 	public void editProductAction(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+		
 		HashMap<String,Object> map = new HashMap<String, Object>();
 		
 		map.put("productId",request.getParameter("productId"));

@@ -8,7 +8,7 @@
 		insert into products values (0,#{productName},#{thumbnail},#{contents},#{price})
 	</insert>
 
-	<select id="getListProducts" resultType="Map" parameterType="Map">
+	<select id="getListProducts" resultType="Map">
 		select * from products order by product_id desc
 	</select>
 	

@@ -21,7 +21,7 @@ public class Product {
 		sqlSession.update("editProduct", product);
 	}
 	
-	public List<Map<String,Object>> getListProducts() throws Exception {
+	public List<HashMap<String,Object>> getListProducts() throws Exception {
 		 return sqlSession.selectList("getListProducts");
 	}
 	
