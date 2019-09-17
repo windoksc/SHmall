@@ -21,6 +21,10 @@ public class Product {
 		sqlSession.update("editProduct", product);
 	}
 	
+	public void delProduct(int productId) throws Exception {
+		sqlSession.delete("delProduct", productId);
+	}
+	
 	public List<HashMap<String,Object>> getListProducts() throws Exception {
 		 return sqlSession.selectList("getListProducts");
 	}

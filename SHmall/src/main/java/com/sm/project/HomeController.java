@@ -205,7 +205,7 @@ public class HomeController {
 	}
 	
 	// 품목 수정 action
-	@RequestMapping(value = "addProductAction", method = { RequestMethod.GET, RequestMethod.POST })
+	@RequestMapping(value = "editProductAction", method = { RequestMethod.GET, RequestMethod.POST })
 	public void editProductAction(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		
 		HashMap<String,Object> map = new HashMap<String, Object>();
@@ -220,4 +220,15 @@ public class HomeController {
 		
 		request.getRequestDispatcher("listProduct").forward(request, resp);
 	}
+	
+	// 품목 수정 action
+		@RequestMapping(value = "deleteProductAction", method = { RequestMethod.GET, RequestMethod.POST })
+		public void deleteProductAction(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
+
+			String pId = (String)request.getAttribute("productId");
+
+			product.delProduct(Integer.parseInt(pId));
+			
+			request.getRequestDispatcher("listProduct").forward(request, resp);
+		}
 }

@@ -8,6 +8,17 @@
 		insert into products values (0,#{productName},#{thumbnail},#{contents},#{price})
 	</insert>
 
+	<update id="editProduct" parameterType="Map">
+		update products set 
+		productName=#{productName}, thumbnail=#{thumbnail}, 
+		contents=#{contents}, price=#{price} 
+		where productId=#{productId}
+	</update>
+	
+	<delete id="delProduct" parameterType="int">
+		delete from products where productId=#{productId}
+	</delete>
+	
 	<select id="getListProducts" resultType="Map">
 		select * from products order by product_id desc
 	</select>
