@@ -79,7 +79,6 @@ public class HomeController {
 	}	
 
 	@RequestMapping(value = "logout", method = { RequestMethod.GET, RequestMethod.POST })
-	@ResponseBody
 	public String logout(HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception {
 		httpSession.invalidate();
 		return "main";

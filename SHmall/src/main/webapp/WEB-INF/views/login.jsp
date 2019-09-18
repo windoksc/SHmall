@@ -22,19 +22,24 @@
 			success : function(data) {
 				if (data == 0) {
 					alert("로그인");
+					a();
 				} else {
 					alert("정보 틀림 다시");
-					return;
 				}
 			}
 		});
 	}
+	function a() {
+		console.log("awefs");
+		window.location.href = 'www.naver.com';
+	}
+	
 </script>
 </head>
 <form action="" method="post" id="login" name="login">
 	<div class="login-cont" id="loginArea">
-		<script type="text/javascript"
-			src="/Scripts/Login/LogIn.js?637032122268835961"></script>
+<!-- 		<SCRIPT TYPE="TEXT/JAVASCRIPT" -->
+<!-- 			SRC="/SCRIPTS/LOGIN/LOGIN.JS?637032122268835961"></SCRIPT> -->
 		<div class="login">
 			<h2>
 				<span id="title_member" class="title_login" style="display: block;">로그인</span>

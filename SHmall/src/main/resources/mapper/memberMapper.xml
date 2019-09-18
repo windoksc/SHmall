@@ -12,5 +12,9 @@ insert into members (member_id,member_name,password,email,phone,admin,date) valu
 select member_id,password,count(*) from members where member_id = #{id} and password = #{password}
 </select>
 
+<insert id="addproduct" parameterType="Map">
+insert into product (a,b,c) values (#{},#{},#{})
+</insert>
+
 </mapper>
 	
