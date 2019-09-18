@@ -29,7 +29,7 @@
 				 	<tr>
 				 		<td colspan="2">
 				 			 <form action="addCart" method="post">
-				 			 	<input type="hidden" name="productNumber" value="${product.productNumber }">
+				 			 	<input type="hidden" name="productId" value="${product.productId }">
 				 			 	<select name="amount">
 				 			 		<c:forEach begin="1" end="10" var="i">
 				 			 			<option value="${i }">${i }</option>
