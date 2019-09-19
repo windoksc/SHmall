@@ -41,12 +41,10 @@
 		<beans:property name="maxUploadSize" value="10000000" />
 		<beans:property name="maxInMemorySize" value="100000000" />
 	</beans:bean>
- <context:component-scan
+ 	<context:component-scan
 		base-package="com.sm.project" use-default-filters="false">
 		<context:include-filter type="annotation"
 			expression="org.springframework.stereotype.Controller" />
 	</context:component-scan>
- 
 
-	
 </beans:beans>

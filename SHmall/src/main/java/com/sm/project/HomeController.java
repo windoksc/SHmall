@@ -1,9 +1,7 @@
 package com.sm.project;
 
-import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -38,7 +36,7 @@ public class HomeController {
 	
 	@Autowired
 	private Product product;
-	
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -121,12 +119,14 @@ public class HomeController {
 		
 		return a;
 	}
+	
 	// 장바구니 추가
-	@RequestMapping(value = "cart", method = { RequestMethod.GET, RequestMethod.POST })
+	@RequestMapping(value = "addCart", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody
 	public void addCart(Session session,HttpServletRequest request, HttpServletResponse resp, HttpSession httpSession) throws Exception{
 		
 	}
+
 	// 회원 가입 등록
 	@RequestMapping(value = "siginup", method = { RequestMethod.GET, RequestMethod.POST })
 	@ResponseBody 
