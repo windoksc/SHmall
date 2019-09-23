@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title></title>
-<link rel="stylesheet" type="text/css" href="../css/header.css">
+<link rel="stylesheet" type="text/css" href="../css/header.css?1">
 </head>
 <body>
 	<div class="cover">

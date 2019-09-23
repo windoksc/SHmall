@@ -10,7 +10,7 @@ fieldset, form{margin:0;padding:0;}
 body, input, textarea, select, button, table{font-size:12px; font-family:"돋움",dotum,Helvetica,AppleGothic,Sans-serif;
 text-align:center; background:#fff; color:#000;}
 
-.cover{height:50px; margin-top:20px; position:fixed; clear:both; overflow:hidden;}
+.cover{height:30px; margin-top:10px; clear:both; overflow:hidden;}
 
 /* 기본메뉴 */
 .category{width:400px; float:left;}
